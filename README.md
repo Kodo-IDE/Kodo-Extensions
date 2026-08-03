@@ -1,2 +1,2 @@
 # Kodo-Extensions
-The main repo for all extensions or compilers for Kodo!
+The main repository for all extensions or compilers for Kodo!
