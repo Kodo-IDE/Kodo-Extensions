@@ -134,13 +134,13 @@
     },
     {
       "id": "json-kodo-extension",
-      "version": "v1.1.0",
+      "version": "v1.1.1",
       "name": "JSON Language Support",
       "type": "language",
       "author": "Kodo Team",
-      "description": "Syntax highlighting for JSON and JSONC files.",
-      "fileName": "JSON-Kodo-Extension-v1.1.0.kox",
-      "downloadUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/JSON-Kodo-Extension-v1.1.0.kox",
+      "description": "Syntax highlighting for JSON, JSONC, and JSONL files.",
+      "fileName": "JSON-Kodo-Extension-v1.1.1.kox",
+      "downloadUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/JSON-Kodo-Extension-v1.1.1.kox",
       "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/JSON_vector_logo.svg"
     },
     {
