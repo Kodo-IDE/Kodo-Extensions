@@ -432,13 +432,13 @@
     {
       "id": "holyc",
       "version": "1.0.0",
-      "name": "HolyC (TempleOS)",
+      "name": "HolyC Compiler",
       "type": "compiler",
       "author": "Terry A. Davis",
       "description": "The HolyC compiler originally developed for TempleOS.",
       "fileName": "HolyC-Compiler.zip",
       "downloadUrl": "https://github.com/nrootconauto/HolyC-Compiler/archive/refs/heads/master.zip",
-      "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/TempleOS_logo.png"
+      "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/HolyC_Logo.svg"
     }
   ]
 }
