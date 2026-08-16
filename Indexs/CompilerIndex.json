@@ -221,17 +221,6 @@
       "iconUrl": "https://cdn.simpleicons.org/gnu"
     },
     {
-      "id": "intel-oneapi-dpcpp",
-      "version": "2025.0",
-      "name": "Intel oneAPI DPC++ Compiler",
-      "type": "compiler",
-      "author": "Intel",
-      "description": "Intel's DPC++ compiler for C++ and SYCL, supporting CPU, GPU, and FPGA.",
-      "fileName": "w_BaseKit_p_2025.0.0.123_offline.exe",
-      "downloadUrl": "https://registrationcenter-download.intel.com/akdlm/irc_nas/12345/w_BaseKit_p_2025.0.0.123_offline.exe",
-      "iconUrl": "https://cdn.simpleicons.org/intel"
-    },
-    {
       "id": "elixir",
       "version": "1.17.1",
       "name": "Elixir",
@@ -331,17 +320,6 @@
       "iconUrl": "https://cdn.simpleicons.org/clojure"
     },
     {
-      "id": "tcl-tk",
-      "version": "8.6.14",
-      "name": "Tcl/Tk",
-      "type": "compiler",
-      "author": "Tcl Project",
-      "description": "Tcl scripting language compiler and GUI toolkit.",
-      "fileName": "tcl8.6.14-win32-64.exe",
-      "downloadUrl": "https://www.activestate.com/products/tcl/",
-      "iconUrl": "https://cdn.simpleicons.org/tcl"
-    },
-    {
       "id": "ada",
       "version": "2023.0.0",
       "name": "GNAT Ada",
@@ -362,17 +340,6 @@
       "fileName": "lua-5.4.7_Win64_bin.zip",
       "downloadUrl": "https://sourceforge.net/projects/luabinaries/files/5.4.7/",
       "iconUrl": "https://cdn.simpleicons.org/lua"
-    },
-    {
-      "id": "prolog",
-      "version": "8.4.0",
-      "name": "SWI-Prolog",
-      "type": "compiler",
-      "author": "SWI-Prolog Project",
-      "description": "SWI-Prolog compiler and runtime.",
-      "fileName": "swipl-8.4.0-x64.exe",
-      "downloadUrl": "https://www.swi-prolog.org/download/stable/bin/swipl-8.4.0-x64.exe",
-      "iconUrl": "https://cdn.simpleicons.org/prolog"
     },
     {
       "id": "racket",
@@ -441,17 +408,6 @@
       "iconUrl": "https://github.com/idris-lang/idris-lang.github.io/blob/main/src/content/images/logo-small.png"
     },
     {
-      "id": "pony",
-      "version": "0.43.1",
-      "name": "Pony",
-      "type": "compiler",
-      "author": "Pony Project",
-      "description": "Pony programming language compiler (ponyc).",
-      "fileName": "ponyc-0.43.1-win64.exe",
-      "downloadUrl": "https://github.com/ponylang/ponyc/releases/download/0.43.1/ponyc-0.43.1-win64.exe",
-      "iconUrl": "https://cdn.simpleicons.org/pony"
-    },
-    {
       "id": "d",
       "version": "2.107.0",
       "name": "D Lang (DMD)",
@@ -461,6 +417,28 @@
       "fileName": "dmd-2.107.0-windows-x64.exe",
       "downloadUrl": "https://dlang.org/download.html",
       "iconUrl": "https://cdn.simpleicons.org/d"
+    },
+    {
+      "id": "nasm",
+      "version": "2.16.03",
+      "name": "NASM (Netwide Assembler)",
+      "type": "compiler",
+      "author": "The NASM Development Team",
+      "description": "An 80x86 and x86-64 assembler designed for portability and modularity.",
+      "fileName": "nasm-2.16.03-win64.zip",
+      "downloadUrl": "https://www.nasm.us/pub/nasm/releasebuilds/2.16.03/win64/nasm-2.16.03-win64.zip",
+      "iconUrl": "https://cdn.simpleicons.org/assemblyscript"
+    },
+    {
+      "id": "holyc",
+      "version": "1.0.0",
+      "name": "HolyC (TempleOS)",
+      "type": "compiler",
+      "author": "Terry A. Davis",
+      "description": "The HolyC compiler originally developed for TempleOS.",
+      "fileName": "HolyC-Compiler.zip",
+      "downloadUrl": "https://github.com/nrootconauto/HolyC-Compiler/archive/refs/heads/master.zip",
+      "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/TempleOS_logo.png"
     }
   ]
 }
