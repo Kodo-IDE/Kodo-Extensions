@@ -1,0 +1,15 @@
+{
+  "compilers": [
+    {
+      "id": "shine-compiler",
+      "version": "v0.8.0-BETA",
+      "name": "Shine Compiler",
+      "type": "compiler",
+      "author": "KerbalMissile",
+      "description": "The compiler for the Shine language by KerbalMissile.",
+      "fileName": "Shine-v0.8.0-BETA-Installer.exe",
+      "downloadUrl": "https://github.com/Shine-Language/Shine-Compiler/releases/download/v0.8.0-BETA/Shine-v0.8.0-BETA-Installer.exe",
+      "iconUrl": "https://raw.githubusercontent.com/Shine-Language/Shine-Website/main/logo.png"
+    }
+  ]
+}
