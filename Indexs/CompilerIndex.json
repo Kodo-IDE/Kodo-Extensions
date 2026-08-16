@@ -6,7 +6,7 @@
       "name": ".NET SDK",
       "type": "compiler",
       "author": "Microsoft",
-      "description": "The .NET SDK - C#/F#/VB compilers, MSBuild, and the dotnet CLI.",
+      "description": "The .NET SDK - C#/F#/VB compilers, MSBuild, and the dotnet CLI.[cite: 1]",
       "fileName": "dotnet-sdk-8.0.404-win-x64.exe",
       "downloadUrl": "https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.404/dotnet-sdk-8.0.404-win-x64.exe",
       "iconUrl": "https://cdn.simpleicons.org/dotnet"
@@ -17,7 +17,7 @@
       "name": "Go",
       "type": "compiler",
       "author": "Google",
-      "description": "The Go programming language compiler and tools.",
+      "description": "The Go programming language compiler and tools.[cite: 1]",
       "fileName": "go1.23.4.windows-amd64.msi",
       "downloadUrl": "https://go.dev/dl/go1.23.4.windows-amd64.msi",
       "iconUrl": "https://cdn.simpleicons.org/go"
@@ -28,7 +28,7 @@
       "name": "Java (Temurin JDK)",
       "type": "compiler",
       "author": "Eclipse Adoptium",
-      "description": "OpenJDK build (javac and the JVM) from the Eclipse Adoptium project.",
+      "description": "OpenJDK build (javac and the JVM) from the Eclipse Adoptium project.[cite: 1]",
       "fileName": "OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi",
       "downloadUrl": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.5%2B11/OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi",
       "iconUrl": "https://cdn.simpleicons.org/openjdk"
@@ -39,7 +39,7 @@
       "name": "Julia",
       "type": "compiler",
       "author": "JuliaLang",
-      "description": "The Julia language runtime and JIT compiler.",
+      "description": "The Julia language runtime and JIT compiler.[cite: 1]",
       "fileName": "julia-1.10.7-win64.exe",
       "downloadUrl": "https://julialang-s3.julialang.org/bin/winnt/x64/1.10/julia-1.10.7-win64.exe",
       "iconUrl": "https://cdn.simpleicons.org/julia"
@@ -50,7 +50,7 @@
       "name": "LLVM / Clang",
       "type": "compiler",
       "author": "LLVM Project",
-      "description": "Clang/LLVM compiler toolchain for Windows.",
+      "description": "Clang/LLVM compiler toolchain for Windows.[cite: 1]",
       "fileName": "LLVM-19.1.6-win64.exe",
       "downloadUrl": "https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.6/LLVM-19.1.6-win64.exe",
       "iconUrl": "https://cdn.simpleicons.org/llvm"
@@ -61,7 +61,7 @@
       "name": "MinGW-w64 (GCC via MSYS2)",
       "type": "compiler",
       "author": "MSYS2 Project",
-      "description": "GCC/G++ for Windows through the MSYS2 environment and package manager.",
+      "description": "GCC/G++ for Windows through the MSYS2 environment and package manager.[cite: 1]",
       "fileName": "msys2-x86_64-20241208.exe",
       "downloadUrl": "https://github.com/msys2/msys2-installer/releases/download/2024-12-08/msys2-x86_64-20241208.exe",
       "iconUrl": "https://cdn.simpleicons.org/gnu"
@@ -72,7 +72,7 @@
       "name": "Node.js",
       "type": "compiler",
       "author": "OpenJS Foundation",
-      "description": "JavaScript runtime built on V8, including npm.",
+      "description": "JavaScript runtime built on V8, including npm.[cite: 1]",
       "fileName": "node-v24.18.1-x64.msi",
       "downloadUrl": "https://nodejs.org/dist/v24.18.1/node-v24.18.1-x64.msi",
       "iconUrl": "https://cdn.simpleicons.org/nodedotjs"
@@ -83,7 +83,7 @@
       "name": "Perl (Strawberry Perl)",
       "type": "compiler",
       "author": "Strawberry Perl Project",
-      "description": "A complete Perl environment for Windows, including a C toolchain.",
+      "description": "A complete Perl environment for Windows, including a C toolchain.[cite: 1]",
       "fileName": "strawberry-perl-5.40.0.1-64bit.msi",
       "downloadUrl": "https://strawberryperl.com/download/5.40.0.1/strawberry-perl-5.40.0.1-64bit.msi",
       "iconUrl": "https://cdn.simpleicons.org/perl"
@@ -94,7 +94,7 @@
       "name": "Python",
       "type": "compiler",
       "author": "Python Software Foundation",
-      "description": "The reference CPython interpreter and toolchain.",
+      "description": "The reference CPython interpreter and toolchain.[cite: 1]",
       "fileName": "python-3.14.7-amd64.exe",
       "downloadUrl": "https://www.python.org/ftp/python/3.14.7/python-3.14.7-amd64.exe",
       "iconUrl": "https://cdn.simpleicons.org/python"
@@ -105,7 +105,7 @@
       "name": "Ruby",
       "type": "compiler",
       "author": "RubyInstaller Team",
-      "description": "Ruby interpreter for Windows via RubyInstaller, including DevKit.",
+      "description": "Ruby interpreter for Windows via RubyInstaller, including DevKit.[cite: 1]",
       "fileName": "rubyinstaller-3.3.6-1-x64.exe",
       "downloadUrl": "https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.3.6-1/rubyinstaller-3.3.6-1-x64.exe",
       "iconUrl": "https://cdn.simpleicons.org/ruby"
@@ -116,7 +116,7 @@
       "name": "Rust",
       "type": "compiler",
       "author": "Rust Foundation",
-      "description": "Installs rustup, the Rust toolchain installer, then the latest stable rustc/cargo.",
+      "description": "Installs rustup, the Rust toolchain installer, then the latest stable rustc/cargo.[cite: 1]",
       "fileName": "rustup-init.exe",
       "downloadUrl": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe",
       "iconUrl": "https://cdn.simpleicons.org/rust"
@@ -127,7 +127,7 @@
       "name": "Shine Compiler",
       "type": "compiler",
       "author": "KerbalMissile",
-      "description": "The compiler for the Shine language by KerbalMissile.",
+      "description": "The compiler for the Shine language by KerbalMissile.[cite: 1]",
       "fileName": "Shine-v0.8.0-BETA-Installer.exe",
       "downloadUrl": "https://github.com/Shine-Language/Shine-Compiler/releases/download/v0.8.0-BETA/Shine-v0.8.0-BETA-Installer.exe",
       "iconUrl": "https://raw.githubusercontent.com/Shine-Language/Shine-Website/main/logo.png"
@@ -138,10 +138,65 @@
       "name": "Swift",
       "type": "compiler",
       "author": "Swift.org",
-      "description": "The Swift compiler and toolchain for Windows.",
+      "description": "The Swift compiler and toolchain for Windows.[cite: 1]",
       "fileName": "swift-5.10.1-RELEASE-windows10.exe",
       "downloadUrl": "https://download.swift.org/swift-5.10.1-release/windows10/swift-5.10.1-RELEASE/swift-5.10.1-RELEASE-windows10.exe",
       "iconUrl": "https://cdn.simpleicons.org/swift"
+    },
+    {
+      "id": "zig",
+      "version": "0.13.0",
+      "name": "Zig",
+      "type": "compiler",
+      "author": "Zig Software Foundation",
+      "description": "The Zig programming language compiler and toolchain.",
+      "fileName": "zig-windows-x86_64-0.13.0.zip",
+      "downloadUrl": "https://ziglang.org/download/0.13.0/zig-windows-x86_64-0.13.0.zip",
+      "iconUrl": "https://cdn.simpleicons.org/zig"
+    },
+    {
+      "id": "php",
+      "version": "8.3.7",
+      "name": "PHP",
+      "type": "compiler",
+      "author": "The PHP Group",
+      "description": "The PHP scripting language interpreter and runtime for Windows.",
+      "fileName": "php-8.3.7-Win32-vs16-x64.zip",
+      "downloadUrl": "https://windows.php.net/downloads/releases/php-8.3.7-Win32-vs16-x64.zip",
+      "iconUrl": "https://cdn.simpleicons.org/php"
+    },
+    {
+      "id": "kotlin",
+      "version": "1.9.24",
+      "name": "Kotlin",
+      "type": "compiler",
+      "author": "JetBrains",
+      "description": "The Kotlin programming language compiler (kotlinc).",
+      "fileName": "kotlin-compiler-1.9.24.zip",
+      "downloadUrl": "https://github.com/JetBrains/kotlin/releases/download/v1.9.24/kotlin-compiler-1.9.24.zip",
+      "iconUrl": "https://cdn.simpleicons.org/kotlin"
+    },
+    {
+      "id": "dart",
+      "version": "3.4.1",
+      "name": "Dart SDK",
+      "type": "compiler",
+      "author": "Google",
+      "description": "The Dart SDK, including the Dart VM, compiler, and tools.",
+      "fileName": "dartsdk-windows-x64-release.zip",
+      "downloadUrl": "https://storage.googleapis.com/dart-archive/channels/stable/release/3.4.1/sdk/dartsdk-windows-x64-release.zip",
+      "iconUrl": "https://cdn.simpleicons.org/dart"
+    },
+    {
+      "id": "ghc",
+      "version": "9.8.2",
+      "name": "Glasgow Haskell Compiler (GHC)",
+      "type": "compiler",
+      "author": "GHC Team",
+      "description": "The Glasgow Haskell Compiler and toolchain.",
+      "fileName": "ghc-9.8.2-x86_64-unknown-mingw32.tar.xz",
+      "downloadUrl": "https://downloads.haskell.org/~ghc/9.8.2/ghc-9.8.2-x86_64-unknown-mingw32.tar.xz",
+      "iconUrl": "https://cdn.simpleicons.org/haskell"
     }
   ]
 }
