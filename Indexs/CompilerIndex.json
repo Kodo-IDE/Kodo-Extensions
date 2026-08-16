@@ -221,17 +221,6 @@
       "iconUrl": "https://cdn.simpleicons.org/gnu"
     },
     {
-      "id": "cygwin",
-      "version": "3.5.0",
-      "name": "Cygwin",
-      "type": "compiler",
-      "author": "Cygwin Project",
-      "description": "Large collection of GNU and Open Source tools, including GCC, for Windows.",
-      "fileName": "setup-x86_64.exe",
-      "downloadUrl": "https://www.cygwin.com/setup-x86_64.exe",
-      "iconUrl": "https://cdn.simpleicons.org/gnu"
-    },
-    {
       "id": "intel-oneapi-dpcpp",
       "version": "2025.0",
       "name": "Intel oneAPI DPC++ Compiler",
@@ -241,28 +230,6 @@
       "fileName": "w_BaseKit_p_2025.0.0.123_offline.exe",
       "downloadUrl": "https://registrationcenter-download.intel.com/akdlm/irc_nas/12345/w_BaseKit_p_2025.0.0.123_offline.exe",
       "iconUrl": "https://cdn.simpleicons.org/intel"
-    },
-    {
-      "id": "nvidia-cuda",
-      "version": "12.4",
-      "name": "NVIDIA CUDA Toolkit",
-      "type": "compiler",
-      "author": "NVIDIA",
-      "description": "CUDA compiler (nvcc) and libraries for GPU programming.",
-      "fileName": "cuda_12.4.0_551.61_windows.exe",
-      "downloadUrl": "https://developer.download.nvidia.com/compute/cuda/12.4.0/local_installers/cuda_12.4.0_551.61_windows.exe",
-      "iconUrl": "https://cdn.simpleicons.org/nvidia"
-    },
-    {
-      "id": "rocm",
-      "version": "6.1.2",
-      "name": "AMD ROCm",
-      "type": "compiler",
-      "author": "AMD",
-      "description": "ROCm compiler suite for GPU programming (HIP, OpenCL, etc.).",
-      "fileName": "ROCm-6.1.2-windows.exe",
-      "downloadUrl": "https://download.amd.com/developer/rocm/ROCm-6.1.2-windows.exe",
-      "iconUrl": "https://cdn.simpleicons.org/amd"
     },
     {
       "id": "elixir",
@@ -331,17 +298,6 @@
       "iconUrl": "https://cdn.simpleicons.org/ocaml"
     },
     {
-      "id": "fsharp",
-      "version": "8.0.0",
-      "name": "F#",
-      "type": "compiler",
-      "author": "Microsoft",
-      "description": "F# compiler included with .NET SDK, listed separately for clarity.",
-      "fileName": "fsharp-8.0.0.zip",
-      "downloadUrl": "https://github.com/dotnet/fsharp/releases/download/v8.0.0/fsharp-8.0.0.zip",
-      "iconUrl": "https://cdn.simpleicons.org/fsharp"
-    },
-    {
       "id": "scala",
       "version": "3.4.1",
       "name": "Scala",
@@ -362,28 +318,6 @@
       "fileName": "apache-groovy-sdk-4.0.21.zip",
       "downloadUrl": "https://groovy.apache.org/download.html",
       "iconUrl": "https://cdn.simpleicons.org/apachegroovy"
-    },
-    {
-      "id": "jruby",
-      "version": "9.4.8.0",
-      "name": "JRuby",
-      "type": "compiler",
-      "author": "JRuby Project",
-      "description": "Ruby implementation on the JVM with JIT compiler.",
-      "fileName": "jruby-dist-9.4.8.0-bin.zip",
-      "downloadUrl": "https://github.com/jruby/jruby/releases/download/9.4.8.0/jruby-dist-9.4.8.0-bin.zip",
-      "iconUrl": "https://cdn.simpleicons.org/jruby"
-    },
-    {
-      "id": "jython",
-      "version": "2.7.3",
-      "name": "Jython",
-      "type": "compiler",
-      "author": "Jython Project",
-      "description": "Python implementation on the JVM.",
-      "fileName": "jython-installer-2.7.3.jar",
-      "downloadUrl": "https://repo1.maven.org/maven2/org/python/jython-installer/2.7.3/jython-installer-2.7.3.jar",
-      "iconUrl": "https://cdn.simpleicons.org/python"
     },
     {
       "id": "clojure",
@@ -408,17 +342,6 @@
       "iconUrl": "https://cdn.simpleicons.org/tcl"
     },
     {
-      "id": "forth",
-      "version": "1.0.0",
-      "name": "Forth (gforth)",
-      "type": "compiler",
-      "author": "Forth Project",
-      "description": "Gforth - portable Forth compiler and interpreter.",
-      "fileName": "gforth-win32-1.0.0.exe",
-      "downloadUrl": "https://www.complang.tuwien.ac.at/forth/gforth/",
-      "iconUrl": "https://cdn.simpleicons.org/gnu"
-    },
-    {
       "id": "ada",
       "version": "2023.0.0",
       "name": "GNAT Ada",
@@ -438,17 +361,6 @@
       "description": "Lua programming language interpreter and compiler (luac).",
       "fileName": "lua-5.4.7_Win64_bin.zip",
       "downloadUrl": "https://sourceforge.net/projects/luabinaries/files/5.4.7/",
-      "iconUrl": "https://cdn.simpleicons.org/lua"
-    },
-    {
-      "id": "luajit",
-      "version": "2.1.0",
-      "name": "LuaJIT",
-      "type": "compiler",
-      "author": "LuaJIT Project",
-      "description": "Just-in-time compiler for Lua.",
-      "fileName": "LuaJIT-2.1.0-Win64.exe",
-      "downloadUrl": "https://github.com/LuaJIT/LuaJIT/releases/download/v2.1.0/LuaJIT-2.1.0-Win64.exe",
       "iconUrl": "https://cdn.simpleicons.org/lua"
     },
     {
@@ -472,17 +384,6 @@
       "fileName": "racket-8.14-x86_64-win32.exe",
       "downloadUrl": "https://download.racket-lang.org/",
       "iconUrl": "https://cdn.simpleicons.org/racket"
-    },
-    {
-      "id": "smalltalk",
-      "version": "3.2.5",
-      "name": "GNU Smalltalk",
-      "type": "compiler",
-      "author": "GNU Project",
-      "description": "GNU Smalltalk programming language compiler.",
-      "fileName": "gst-3.2.5-win32.exe",
-      "downloadUrl": "https://github.com/gnu-smalltalk/smalltalk",
-      "iconUrl": "https://cdn.simpleicons.org/gnu"
     },
     {
       "id": "coffeescript",
@@ -537,29 +438,7 @@
       "description": "Idris programming language compiler.",
       "fileName": "idris-1.3.4-win64.exe",
       "downloadUrl": "https://github.com/idris-lang/Idris2/releases",
-      "iconUrl": "https://cdn.simpleicons.org/haskell"
-    },
-    {
-      "id": "agda",
-      "version": "2.6.4",
-      "name": "Agda",
-      "type": "compiler",
-      "author": "Agda Project",
-      "description": "Agda proof assistant and compiler.",
-      "fileName": "Agda-2.6.4-win64.exe",
-      "downloadUrl": "https://github.com/agda/agda/releases",
-      "iconUrl": "https://cdn.simpleicons.org/haskell"
-    },
-    {
-      "id": "lean",
-      "version": "4.12.0",
-      "name": "Lean",
-      "type": "compiler",
-      "author": "Lean Project",
-      "description": "Lean theorem prover and programming language.",
-      "fileName": "lean-4.12.0-win64.exe",
-      "downloadUrl": "https://github.com/leanprover/lean4/releases/download/v4.12.0/lean-4.12.0-win64.exe",
-      "iconUrl": "https://cdn.simpleicons.org/lean"
+      "iconUrl": "https://github.com/idris-lang/idris-lang.github.io/blob/main/src/content/images/logo-small.png"
     },
     {
       "id": "pony",
@@ -582,94 +461,6 @@
       "fileName": "dmd-2.107.0-windows-x64.exe",
       "downloadUrl": "https://dlang.org/download.html",
       "iconUrl": "https://cdn.simpleicons.org/d"
-    },
-    {
-      "id": "haproxy",
-      "version": "2.9.0",
-      "name": "HAProxy",
-      "type": "compiler",
-      "author": "HAProxy Project",
-      "description": "HAProxy load balancer and proxy (not typically a compiler).",
-      "fileName": "haproxy-2.9.0-win64.exe",
-      "downloadUrl": "https://www.haproxy.org/download/2.9/src/",
-      "iconUrl": "https://cdn.simpleicons.org/haproxy"
-    },
-    {
-      "id": "nginx",
-      "version": "1.26.0",
-      "name": "Nginx",
-      "type": "compiler",
-      "author": "Nginx Project",
-      "description": "Nginx web server (not typically a compiler).",
-      "fileName": "nginx-1.26.0-win64.zip",
-      "downloadUrl": "https://nginx.org/download/nginx-1.26.0.zip",
-      "iconUrl": "https://cdn.simpleicons.org/nginx"
-    },
-    {
-      "id": "apache-httpd",
-      "version": "2.4.59",
-      "name": "Apache HTTP Server",
-      "type": "compiler",
-      "author": "Apache Software Foundation",
-      "description": "Apache HTTP Server (not typically a compiler).",
-      "fileName": "httpd-2.4.59-win64.zip",
-      "downloadUrl": "https://www.apachelounge.com/download/",
-      "iconUrl": "https://cdn.simpleicons.org/apache"
-    },
-    {
-      "id": "mysql",
-      "version": "8.4.0",
-      "name": "MySQL",
-      "type": "compiler",
-      "author": "Oracle",
-      "description": "MySQL database server (not a compiler).",
-      "fileName": "mysql-8.4.0-winx64.msi",
-      "downloadUrl": "https://dev.mysql.com/downloads/file/?id=526399",
-      "iconUrl": "https://cdn.simpleicons.org/mysql"
-    },
-    {
-      "id": "postgresql",
-      "version": "16.3",
-      "name": "PostgreSQL",
-      "type": "compiler",
-      "author": "PostgreSQL Global Development Group",
-      "description": "PostgreSQL database server (not a compiler).",
-      "fileName": "postgresql-16.3-2-windows-x64.exe",
-      "downloadUrl": "https://www.enterprisedb.com/downloads/postgres-postgresql-downloads",
-      "iconUrl": "https://cdn.simpleicons.org/postgresql"
-    },
-    {
-      "id": "mongodb",
-      "version": "7.0.12",
-      "name": "MongoDB",
-      "type": "compiler",
-      "author": "MongoDB",
-      "description": "MongoDB NoSQL database (not a compiler).",
-      "fileName": "mongodb-windows-x86_64-7.0.12.msi",
-      "downloadUrl": "https://www.mongodb.com/try/download/community",
-      "iconUrl": "https://cdn.simpleicons.org/mongodb"
-    },
-    {
-      "id": "redis",
-      "version": "7.2.5",
-      "name": "Redis",
-      "type": "compiler",
-      "author": "Redis Project",
-      "description": "Redis in-memory data store (not a compiler).",
-      "fileName": "Redis-x64-7.2.5.msi",
-      "downloadUrl": "https://github.com/microsoftarchive/redis/releases",
-      "iconUrl": "https://cdn.simpleicons.org/redis"
-    },
-    {
-      "id": "memcached",
-      "version": "1.6.24",
-      "name": "Memcached",
-      "type": "compiler",
-      "author": "Memcached Project",
-      "description": "Memcached caching system (not a compiler).",
-      "fileName": "memcached-1.6.24-win64.exe",
-      "downloadUrl": "https://github.com/jefyt/memcached-windows",
-      "iconUrl": "https://cdn.simpleicons.org/memcached"
     }
   ]
 }
