@@ -439,6 +439,17 @@
       "fileName": "HolyC-Compiler.zip",
       "downloadUrl": "https://github.com/nrootconauto/HolyC-Compiler/archive/refs/heads/master.zip",
       "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/HolyC_Logo.svg"
+    },
+    {
+      "id": "gravel",
+      "version": "v0.2.0",
+      "name": "Gravel",
+      "type": "compiler",
+      "author": "Pacsfury",
+      "description": "Gravel Launcher release v0.2.0.",
+      "fileName": "gravel.zip",
+      "downloadUrl": "https://github.com/Pacsfury/Gravel-Launcher/releases/download/v0.2.0/gravel.zip",
+      "iconUrl": "https://github.com/Pacsfury/Gravel-Launcher/blob/main/img/logo.png"
     }
   ]
 }
