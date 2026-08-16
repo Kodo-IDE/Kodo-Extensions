@@ -197,6 +197,17 @@
       "fileName": "ghc-9.8.2-x86_64-unknown-mingw32.tar.xz",
       "downloadUrl": "https://downloads.haskell.org/~ghc/9.8.2/ghc-9.8.2-x86_64-unknown-mingw32.tar.xz",
       "iconUrl": "https://cdn.simpleicons.org/haskell"
+    },
+    {
+      "id": "typescript",
+      "version": "5.5.4",
+      "name": "TypeScript",
+      "type": "compiler",
+      "author": "Microsoft",
+      "description": "The official TypeScript compiler and static type checker (tsc).",
+      "fileName": "typescript-5.5.4.tgz",
+      "downloadUrl": "https://registry.npmjs.org/typescript/-/typescript-5.5.4.tgz",
+      "iconUrl": "https://cdn.simpleicons.org/typescript"
     }
   ]
 }
