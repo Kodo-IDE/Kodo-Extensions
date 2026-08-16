@@ -1,37 +1,15 @@
 {
   "compilers": [
     {
-      "id": "shine",
-      "version": "0.8.0",
-      "name": "Shine Compiler",
+      "id": "dotnet-sdk",
+      "version": "8.0.404",
+      "name": ".NET SDK",
       "type": "compiler",
-      "author": "KerbalMissile",
-      "description": "The compiler for the Shine language by KerbalMissile.",
-      "downloadUrl": "https://github.com/Kodo-IDE/Kodo-Extensions/releases/download/shine-0.8.0/shine-setup.exe",
-      "fileName": "shine-setup.exe",
-      "iconUrl": ""
-    },
-    {
-      "id": "python",
-      "version": "3.14.7",
-      "name": "Python",
-      "type": "compiler",
-      "author": "Python Software Foundation",
-      "description": "The reference CPython interpreter and toolchain.",
-      "downloadUrl": "https://www.python.org/ftp/python/3.14.7/python-3.14.7-amd64.exe",
-      "fileName": "python-3.14.7-amd64.exe",
-      "iconUrl": ""
-    },
-    {
-      "id": "nodejs",
-      "version": "24.18.1",
-      "name": "Node.js",
-      "type": "compiler",
-      "author": "OpenJS Foundation",
-      "description": "JavaScript runtime built on V8, including npm.",
-      "downloadUrl": "https://nodejs.org/dist/v24.18.1/node-v24.18.1-x64.msi",
-      "fileName": "node-v24.18.1-x64.msi",
-      "iconUrl": ""
+      "author": "Microsoft",
+      "description": "The .NET SDK - C#/F#/VB compilers, MSBuild, and the dotnet CLI.",
+      "fileName": "dotnet-sdk-8.0.404-win-x64.exe",
+      "downloadUrl": "https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.404/dotnet-sdk-8.0.404-win-x64.exe",
+      "iconUrl": "https://cdn.simpleicons.org/dotnet"
     },
     {
       "id": "go",
@@ -40,20 +18,9 @@
       "type": "compiler",
       "author": "Google",
       "description": "The Go programming language compiler and tools.",
-      "downloadUrl": "https://go.dev/dl/go1.23.4.windows-amd64.msi",
       "fileName": "go1.23.4.windows-amd64.msi",
-      "iconUrl": ""
-    },
-    {
-      "id": "rust",
-      "version": "latest",
-      "name": "Rust",
-      "type": "compiler",
-      "author": "Rust Foundation",
-      "description": "Installs rustup, the Rust toolchain installer, then the latest stable rustc/cargo.",
-      "downloadUrl": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe",
-      "fileName": "rustup-init.exe",
-      "iconUrl": ""
+      "downloadUrl": "https://go.dev/dl/go1.23.4.windows-amd64.msi",
+      "iconUrl": "https://cdn.simpleicons.org/go"
     },
     {
       "id": "temurin-jdk",
@@ -62,64 +29,9 @@
       "type": "compiler",
       "author": "Eclipse Adoptium",
       "description": "OpenJDK build (javac and the JVM) from the Eclipse Adoptium project.",
-      "downloadUrl": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.5%2B11/OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi",
       "fileName": "OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi",
-      "iconUrl": ""
-    },
-    {
-      "id": "ruby",
-      "version": "3.3.6-1",
-      "name": "Ruby",
-      "type": "compiler",
-      "author": "RubyInstaller Team",
-      "description": "Ruby interpreter for Windows via RubyInstaller, including DevKit.",
-      "downloadUrl": "https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.3.6-1/rubyinstaller-3.3.6-1-x64.exe",
-      "fileName": "rubyinstaller-3.3.6-1-x64.exe",
-      "iconUrl": ""
-    },
-    {
-      "id": "mingw-w64",
-      "version": "2024-12-08",
-      "name": "MinGW-w64 (GCC via MSYS2)",
-      "type": "compiler",
-      "author": "MSYS2 Project",
-      "description": "GCC/G++ for Windows through the MSYS2 environment and package manager.",
-      "downloadUrl": "https://github.com/msys2/msys2-installer/releases/download/2024-12-08/msys2-x86_64-20241208.exe",
-      "fileName": "msys2-x86_64-20241208.exe",
-      "iconUrl": ""
-    },
-    {
-      "id": "llvm-clang",
-      "version": "19.1.6",
-      "name": "LLVM / Clang",
-      "type": "compiler",
-      "author": "LLVM Project",
-      "description": "Clang/LLVM compiler toolchain for Windows.",
-      "downloadUrl": "https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.6/LLVM-19.1.6-win64.exe",
-      "fileName": "LLVM-19.1.6-win64.exe",
-      "iconUrl": ""
-    },
-    {
-      "id": "dotnet-sdk",
-      "version": "8.0.404",
-      "name": ".NET SDK",
-      "type": "compiler",
-      "author": "Microsoft",
-      "description": "The .NET SDK - C#/F#/VB compilers, MSBuild, and the dotnet CLI.",
-      "downloadUrl": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.404/dotnet-sdk-8.0.404-win-x64.exe",
-      "fileName": "dotnet-sdk-8.0.404-win-x64.exe",
-      "iconUrl": ""
-    },
-    {
-      "id": "strawberry-perl",
-      "version": "5.40.0.1",
-      "name": "Perl (Strawberry Perl)",
-      "type": "compiler",
-      "author": "Strawberry Perl Project",
-      "description": "A complete Perl environment for Windows, including a C toolchain.",
-      "downloadUrl": "https://strawberryperl.com/download/5.40.0.1/strawberry-perl-5.40.0.1-64bit.msi",
-      "fileName": "strawberry-perl-5.40.0.1-64bit.msi",
-      "iconUrl": ""
+      "downloadUrl": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.5%2B11/OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi",
+      "iconUrl": "https://cdn.simpleicons.org/openjdk"
     },
     {
       "id": "julia",
@@ -128,9 +40,97 @@
       "type": "compiler",
       "author": "JuliaLang",
       "description": "The Julia language runtime and JIT compiler.",
-      "downloadUrl": "https://julialang-s3.julialang.org/bin/winnt/x64/1.10/julia-1.10.7-win64.exe",
       "fileName": "julia-1.10.7-win64.exe",
-      "iconUrl": ""
+      "downloadUrl": "https://julialang-s3.julialang.org/bin/winnt/x64/1.10/julia-1.10.7-win64.exe",
+      "iconUrl": "https://cdn.simpleicons.org/julia"
+    },
+    {
+      "id": "llvm-clang",
+      "version": "19.1.6",
+      "name": "LLVM / Clang",
+      "type": "compiler",
+      "author": "LLVM Project",
+      "description": "Clang/LLVM compiler toolchain for Windows.",
+      "fileName": "LLVM-19.1.6-win64.exe",
+      "downloadUrl": "https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.6/LLVM-19.1.6-win64.exe",
+      "iconUrl": "https://cdn.simpleicons.org/llvm"
+    },
+    {
+      "id": "msys2-mingw",
+      "version": "2024-12-08",
+      "name": "MinGW-w64 (GCC via MSYS2)",
+      "type": "compiler",
+      "author": "MSYS2 Project",
+      "description": "GCC/G++ for Windows through the MSYS2 environment and package manager.",
+      "fileName": "msys2-x86_64-20241208.exe",
+      "downloadUrl": "https://github.com/msys2/msys2-installer/releases/download/2024-12-08/msys2-x86_64-20241208.exe",
+      "iconUrl": "https://cdn.simpleicons.org/gnu"
+    },
+    {
+      "id": "nodejs",
+      "version": "24.18.1",
+      "name": "Node.js",
+      "type": "compiler",
+      "author": "OpenJS Foundation",
+      "description": "JavaScript runtime built on V8, including npm.",
+      "fileName": "node-v24.18.1-x64.msi",
+      "downloadUrl": "https://nodejs.org/dist/v24.18.1/node-v24.18.1-x64.msi",
+      "iconUrl": "https://cdn.simpleicons.org/nodedotjs"
+    },
+    {
+      "id": "strawberry-perl",
+      "version": "5.40.0.1",
+      "name": "Perl (Strawberry Perl)",
+      "type": "compiler",
+      "author": "Strawberry Perl Project",
+      "description": "A complete Perl environment for Windows, including a C toolchain.",
+      "fileName": "strawberry-perl-5.40.0.1-64bit.msi",
+      "downloadUrl": "https://strawberryperl.com/download/5.40.0.1/strawberry-perl-5.40.0.1-64bit.msi",
+      "iconUrl": "https://cdn.simpleicons.org/perl"
+    },
+    {
+      "id": "python",
+      "version": "3.14.7",
+      "name": "Python",
+      "type": "compiler",
+      "author": "Python Software Foundation",
+      "description": "The reference CPython interpreter and toolchain.",
+      "fileName": "python-3.14.7-amd64.exe",
+      "downloadUrl": "https://www.python.org/ftp/python/3.14.7/python-3.14.7-amd64.exe",
+      "iconUrl": "https://cdn.simpleicons.org/python"
+    },
+    {
+      "id": "rubyinstaller",
+      "version": "3.3.6-1",
+      "name": "Ruby",
+      "type": "compiler",
+      "author": "RubyInstaller Team",
+      "description": "Ruby interpreter for Windows via RubyInstaller, including DevKit.",
+      "fileName": "rubyinstaller-3.3.6-1-x64.exe",
+      "downloadUrl": "https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.3.6-1/rubyinstaller-3.3.6-1-x64.exe",
+      "iconUrl": "https://cdn.simpleicons.org/ruby"
+    },
+    {
+      "id": "rust-rustup",
+      "version": "1.27.1",
+      "name": "Rust",
+      "type": "compiler",
+      "author": "Rust Foundation",
+      "description": "Installs rustup, the Rust toolchain installer, then the latest stable rustc/cargo.",
+      "fileName": "rustup-init.exe",
+      "downloadUrl": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe",
+      "iconUrl": "https://cdn.simpleicons.org/rust"
+    },
+    {
+      "id": "shine-compiler",
+      "version": "v0.8.0-BETA",
+      "name": "Shine Compiler",
+      "type": "compiler",
+      "author": "KerbalMissile",
+      "description": "The compiler for the Shine language by KerbalMissile.",
+      "fileName": "Shine-v0.8.0-BETA-Installer.exe",
+      "downloadUrl": "https://github.com/Shine-Language/Shine-Compiler/releases/download/v0.8.0-BETA/Shine-v0.8.0-BETA-Installer.exe",
+      "iconUrl": "https://raw.githubusercontent.com/Shine-Language/Shine-Website/main/logo.png"
     },
     {
       "id": "swift",
@@ -139,9 +139,9 @@
       "type": "compiler",
       "author": "Swift.org",
       "description": "The Swift compiler and toolchain for Windows.",
-      "downloadUrl": "https://download.swift.org/swift-5.10.1-release/windows10/swift-5.10.1-RELEASE/swift-5.10.1-RELEASE-windows10.exe",
       "fileName": "swift-5.10.1-RELEASE-windows10.exe",
-      "iconUrl": ""
+      "downloadUrl": "https://download.swift.org/swift-5.10.1-release/windows10/swift-5.10.1-RELEASE/swift-5.10.1-RELEASE-windows10.exe",
+      "iconUrl": "https://cdn.simpleicons.org/swift"
     }
   ]
 }
