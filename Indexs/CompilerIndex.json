@@ -776,6 +776,43 @@
         "downloadUrl": "https://github.com/Pacsfury/Gravel-Launcher/releases/download/v0.2.0/gravel.zip",
         "fileName": "gravel.zip"
       }
+    },
+    {
+      "id": "r",
+      "name": "R",
+      "type": "compiler",
+      "author": "R Core Team",
+      "description": "R is a language and environment for statistical computing and graphics.",
+      "iconUrl": "https://cdn.simpleicons.org/r",
+      "resolver": {
+        "kind": "directory-listing",
+        "indexUrl": "https://cran.r-project.org/bin/windows/base/",
+        "entryPattern": "href=\"R-(\\d+\\.\\d+\\.\\d+)-win\\.exe\"",
+        "downloadUrlTemplate": "https://cran.r-project.org/bin/windows/base/R-{version}-win.exe",
+        "fileNameTemplate": "R-{version}-win.exe"
+      },
+      "fallback": {
+        "version": "4.6.1",
+        "downloadUrl": "https://cran.r-project.org/bin/windows/base/R-4.6.1-win.exe",
+        "fileName": "R-4.6.1-win.exe"
+      }
+    },
+    {
+      "id": "freepascal",
+      "name": "Free Pascal",
+      "type": "compiler",
+      "author": "Free Pascal Team",
+      "description": "Open source compiler for Pascal and Object Pascal (FPC), including an IDE.",
+      "iconUrl": "https://www.freepascal.org/pic/logo.gif",
+      "resolver": {
+        "kind": "manual",
+        "infoUrl": "https://sourceforge.net/projects/freepascal/files/Win32/"
+      },
+      "fallback": {
+        "version": "3.2.2",
+        "downloadUrl": "https://sourceforge.net/projects/freepascal/files/Win32/3.2.2/fpc-3.2.2.win32.and.win64.exe/download",
+        "fileName": "fpc-3.2.2.win32.and.win64.exe"
+      }
     }
   ]
 }
