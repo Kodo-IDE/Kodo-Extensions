@@ -2,454 +2,780 @@
   "compilers": [
     {
       "id": "dotnet-sdk",
-      "version": "8.0.404",
       "name": ".NET SDK",
       "type": "compiler",
       "author": "Microsoft",
       "description": "The .NET SDK - C#/F#/VB compilers, MSBuild, and the dotnet CLI.",
-      "fileName": "dotnet-sdk-8.0.404-win-x64.exe",
-      "downloadUrl": "https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.404/dotnet-sdk-8.0.404-win-x64.exe",
-      "iconUrl": "https://cdn.simpleicons.org/dotnet"
+      "iconUrl": "https://cdn.simpleicons.org/dotnet",
+      "resolver": {
+        "kind": "text-pointer",
+        "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/{channel}/latest.version",
+        "channel": "8.0",
+        "urlTemplate": "https://builds.dotnet.microsoft.com/dotnet/Sdk/{version}/dotnet-sdk-{version}-win-x64.exe",
+        "fileNameTemplate": "dotnet-sdk-{version}-win-x64.exe"
+      },
+      "fallback": {
+        "version": "8.0.404",
+        "downloadUrl": "https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.404/dotnet-sdk-8.0.404-win-x64.exe",
+        "fileName": "dotnet-sdk-8.0.404-win-x64.exe"
+      }
     },
     {
       "id": "go",
-      "version": "1.23.4",
       "name": "Go",
       "type": "compiler",
       "author": "Google",
       "description": "The Go programming language compiler and tools.",
-      "fileName": "go1.23.4.windows-amd64.msi",
-      "downloadUrl": "https://go.dev/dl/go1.23.4.windows-amd64.msi",
-      "iconUrl": "https://cdn.simpleicons.org/go"
+      "iconUrl": "https://cdn.simpleicons.org/go",
+      "resolver": {
+        "kind": "json-lookup",
+        "url": "https://go.dev/dl/?mode=json",
+        "filters": "stable=true",
+        "versionField": "version",
+        "versionStripPrefix": "go",
+        "subPath": "files",
+        "subFilters": "os=windows;arch=amd64;kind=installer",
+        "fileNameField": "filename",
+        "urlTemplate": "https://go.dev/dl/{field:filename}"
+      },
+      "fallback": {
+        "version": "1.23.4",
+        "downloadUrl": "https://go.dev/dl/go1.23.4.windows-amd64.msi",
+        "fileName": "go1.23.4.windows-amd64.msi"
+      }
     },
     {
       "id": "temurin-jdk",
-      "version": "21.0.5+11",
       "name": "Java (Temurin JDK)",
       "type": "compiler",
       "author": "Eclipse Adoptium",
       "description": "OpenJDK build (javac and the JVM) from the Eclipse Adoptium project.",
-      "fileName": "OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi",
-      "downloadUrl": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.5%2B11/OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi",
-      "iconUrl": "https://cdn.simpleicons.org/openjdk"
+      "iconUrl": "https://cdn.simpleicons.org/openjdk",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "adoptium/temurin21-binaries",
+        "assetPattern": "^OpenJDK21U-jdk_x64_windows_hotspot_.*\\.msi$",
+        "versionPattern": "^jdk-(.+)$"
+      },
+      "fallback": {
+        "version": "21.0.5+11",
+        "downloadUrl": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.5%2B11/OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi",
+        "fileName": "OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi"
+      }
     },
     {
       "id": "julia",
-      "version": "1.10.7",
       "name": "Julia",
       "type": "compiler",
       "author": "JuliaLang",
       "description": "The Julia language runtime and JIT compiler.",
-      "fileName": "julia-1.10.7-win64.exe",
-      "downloadUrl": "https://julialang-s3.julialang.org/bin/winnt/x64/1.10/julia-1.10.7-win64.exe",
-      "iconUrl": "https://cdn.simpleicons.org/julia"
+      "iconUrl": "https://cdn.simpleicons.org/julia",
+      "resolver": {
+        "kind": "json-lookup",
+        "url": "https://julialang-s3.julialang.org/bin/versions.json",
+        "iterateProperties": "true",
+        "filters": "stable=true",
+        "sortDescBy": "$key",
+        "subPath": "files",
+        "subFilters": "os=winnt;kind=installer;triplet~=x86_64",
+        "versionSubField": "version",
+        "urlField": "url"
+      },
+      "fallback": {
+        "version": "1.10.7",
+        "downloadUrl": "https://julialang-s3.julialang.org/bin/winnt/x64/1.10/julia-1.10.7-win64.exe",
+        "fileName": "julia-1.10.7-win64.exe"
+      }
     },
     {
       "id": "llvm-clang",
-      "version": "19.1.6",
       "name": "LLVM / Clang",
       "type": "compiler",
       "author": "LLVM Project",
       "description": "Clang/LLVM compiler toolchain for Windows.",
-      "fileName": "LLVM-19.1.6-win64.exe",
-      "downloadUrl": "https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.6/LLVM-19.1.6-win64.exe",
-      "iconUrl": "https://cdn.simpleicons.org/llvm"
+      "iconUrl": "https://cdn.simpleicons.org/llvm",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "llvm/llvm-project",
+        "assetPattern": "^LLVM-.*-win64\\.exe$",
+        "versionPattern": "^llvmorg-(.+)$"
+      },
+      "fallback": {
+        "version": "19.1.6",
+        "downloadUrl": "https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.6/LLVM-19.1.6-win64.exe",
+        "fileName": "LLVM-19.1.6-win64.exe"
+      }
     },
     {
       "id": "msys2-mingw",
-      "version": "2024-12-08",
       "name": "MinGW-w64 (GCC via MSYS2)",
       "type": "compiler",
       "author": "MSYS2 Project",
       "description": "GCC/G++ for Windows through the MSYS2 environment and package manager.",
-      "fileName": "msys2-x86_64-20241208.exe",
-      "downloadUrl": "https://github.com/msys2/msys2-installer/releases/download/2024-12-08/msys2-x86_64-20241208.exe",
-      "iconUrl": "https://cdn.simpleicons.org/gnu"
+      "iconUrl": "https://cdn.simpleicons.org/gnu",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "msys2/msys2-installer",
+        "assetPattern": "^msys2-x86_64-.*\\.exe$"
+      },
+      "fallback": {
+        "version": "2024-12-08",
+        "downloadUrl": "https://github.com/msys2/msys2-installer/releases/download/2024-12-08/msys2-x86_64-20241208.exe",
+        "fileName": "msys2-x86_64-20241208.exe"
+      }
     },
     {
       "id": "nodejs",
-      "version": "24.18.1",
       "name": "Node.js",
       "type": "compiler",
       "author": "OpenJS Foundation",
       "description": "JavaScript runtime built on V8, including npm.",
-      "fileName": "node-v24.18.1-x64.msi",
-      "downloadUrl": "https://nodejs.org/dist/v24.18.1/node-v24.18.1-x64.msi",
-      "iconUrl": "https://cdn.simpleicons.org/nodedotjs"
+      "iconUrl": "https://cdn.simpleicons.org/nodedotjs",
+      "resolver": {
+        "kind": "json-lookup",
+        "url": "https://nodejs.org/dist/index.json",
+        "versionField": "version",
+        "versionStripPrefix": "v",
+        "urlTemplate": "https://nodejs.org/dist/v{version}/node-v{version}-x64.msi",
+        "fileNameTemplate": "node-v{version}-x64.msi"
+      },
+      "fallback": {
+        "version": "24.18.1",
+        "downloadUrl": "https://nodejs.org/dist/v24.18.1/node-v24.18.1-x64.msi",
+        "fileName": "node-v24.18.1-x64.msi"
+      }
     },
     {
       "id": "strawberry-perl",
-      "version": "5.40.0.1",
       "name": "Perl (Strawberry Perl)",
       "type": "compiler",
       "author": "Strawberry Perl Project",
       "description": "A complete Perl environment for Windows, including a C toolchain.",
-      "fileName": "strawberry-perl-5.40.0.1-64bit.msi",
-      "downloadUrl": "https://strawberryperl.com/download/5.40.0.1/strawberry-perl-5.40.0.1-64bit.msi",
-      "iconUrl": "https://cdn.simpleicons.org/perl"
+      "iconUrl": "https://cdn.simpleicons.org/perl",
+      "resolver": {
+        "kind": "directory-listing",
+        "indexUrl": "https://strawberryperl.com/download/",
+        "entryPattern": "href=\"(\\d+\\.\\d+\\.\\d+\\.\\d+)/\"",
+        "downloadUrlTemplate": "https://strawberryperl.com/download/{version}/strawberry-perl-{version}-64bit.msi",
+        "fileNameTemplate": "strawberry-perl-{version}-64bit.msi"
+      },
+      "fallback": {
+        "version": "5.40.0.1",
+        "downloadUrl": "https://strawberryperl.com/download/5.40.0.1/strawberry-perl-5.40.0.1-64bit.msi",
+        "fileName": "strawberry-perl-5.40.0.1-64bit.msi"
+      }
     },
     {
       "id": "python",
-      "version": "3.14.7",
       "name": "Python",
       "type": "compiler",
       "author": "Python Software Foundation",
       "description": "The reference CPython interpreter and toolchain.",
-      "fileName": "python-3.14.7-amd64.exe",
-      "downloadUrl": "https://www.python.org/ftp/python/3.14.7/python-3.14.7-amd64.exe",
-      "iconUrl": "https://cdn.simpleicons.org/python"
+      "iconUrl": "https://cdn.simpleicons.org/python",
+      "resolver": {
+        "kind": "directory-listing",
+        "indexUrl": "https://www.python.org/ftp/python/",
+        "entryPattern": "href=\"(3\\.\\d+\\.\\d+)/\"",
+        "downloadUrlTemplate": "https://www.python.org/ftp/python/{version}/python-{version}-amd64.exe",
+        "fileNameTemplate": "python-{version}-amd64.exe"
+      },
+      "fallback": {
+        "version": "3.14.7",
+        "downloadUrl": "https://www.python.org/ftp/python/3.14.7/python-3.14.7-amd64.exe",
+        "fileName": "python-3.14.7-amd64.exe"
+      }
     },
     {
       "id": "rubyinstaller",
-      "version": "3.3.6-1",
       "name": "Ruby",
       "type": "compiler",
       "author": "RubyInstaller Team",
       "description": "Ruby interpreter for Windows via RubyInstaller, including DevKit.",
-      "fileName": "rubyinstaller-3.3.6-1-x64.exe",
-      "downloadUrl": "https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.3.6-1/rubyinstaller-3.3.6-1-x64.exe",
-      "iconUrl": "https://cdn.simpleicons.org/ruby"
+      "iconUrl": "https://cdn.simpleicons.org/ruby",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "oneclick/rubyinstaller2",
+        "assetPattern": "^rubyinstaller-.*-x64\\.exe$",
+        "versionPattern": "^RubyInstaller-(.+)$"
+      },
+      "fallback": {
+        "version": "3.3.6-1",
+        "downloadUrl": "https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.3.6-1/rubyinstaller-3.3.6-1-x64.exe",
+        "fileName": "rubyinstaller-3.3.6-1-x64.exe"
+      }
     },
     {
       "id": "rust-rustup",
-      "version": "1.27.1",
       "name": "Rust",
       "type": "compiler",
       "author": "Rust Foundation",
       "description": "Installs rustup, the Rust toolchain installer, then the latest stable rustc/cargo.",
-      "fileName": "rustup-init.exe",
-      "downloadUrl": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe",
-      "iconUrl": "https://cdn.simpleicons.org/rust"
+      "iconUrl": "https://cdn.simpleicons.org/rust",
+      "resolver": {
+        "kind": "always-latest",
+        "downloadUrl": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe",
+        "fileName": "rustup-init.exe",
+        "versionLabel": "rolling (self-updating)"
+      },
+      "fallback": {
+        "version": "1.27.1",
+        "downloadUrl": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe",
+        "fileName": "rustup-init.exe"
+      }
     },
     {
       "id": "shine-compiler",
-      "version": "v0.8.0-BETA",
       "name": "Shine Compiler",
       "type": "compiler",
       "author": "KerbalMissile",
       "description": "The compiler for the Shine language by KerbalMissile.",
-      "fileName": "Shine-v0.8.0-BETA-Installer.exe",
-      "downloadUrl": "https://github.com/Shine-Language/Shine-Compiler/releases/download/v0.8.0-BETA/Shine-v0.8.0-BETA-Installer.exe",
-      "iconUrl": "https://raw.githubusercontent.com/Shine-Language/Shine-Website/main/logo.png"
+      "iconUrl": "https://raw.githubusercontent.com/Shine-Language/Shine-Website/main/logo.png",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "Shine-Language/Shine-Compiler",
+        "assetPattern": "-Installer\\.exe$",
+        "includePrerelease": "true",
+        "versionPattern": "^v(.+)$"
+      },
+      "fallback": {
+        "version": "v0.8.0-BETA",
+        "downloadUrl": "https://github.com/Shine-Language/Shine-Compiler/releases/download/v0.8.0-BETA/Shine-v0.8.0-BETA-Installer.exe",
+        "fileName": "Shine-v0.8.0-BETA-Installer.exe"
+      }
     },
     {
       "id": "swift",
-      "version": "5.10.1",
       "name": "Swift",
       "type": "compiler",
       "author": "Swift.org",
       "description": "The Swift compiler and toolchain for Windows.",
-      "fileName": "swift-5.10.1-RELEASE-windows10.exe",
-      "downloadUrl": "https://download.swift.org/swift-5.10.1-release/windows10/swift-5.10.1-RELEASE/swift-5.10.1-RELEASE-windows10.exe",
-      "iconUrl": "https://cdn.simpleicons.org/swift"
+      "iconUrl": "https://cdn.simpleicons.org/swift",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "swiftlang/swift",
+        "assetPattern": "windows10\\.exe$",
+        "versionPattern": "^swift-(.+)-RELEASE$"
+      },
+      "fallback": {
+        "version": "5.10.1",
+        "downloadUrl": "https://download.swift.org/swift-5.10.1-release/windows10/swift-5.10.1-RELEASE/swift-5.10.1-RELEASE-windows10.exe",
+        "fileName": "swift-5.10.1-RELEASE-windows10.exe"
+      }
     },
     {
       "id": "zig",
-      "version": "0.13.0",
       "name": "Zig",
       "type": "compiler",
       "author": "Zig Software Foundation",
       "description": "The Zig programming language compiler and toolchain.",
-      "fileName": "zig-windows-x86_64-0.13.0.zip",
-      "downloadUrl": "https://ziglang.org/download/0.13.0/zig-windows-x86_64-0.13.0.zip",
-      "iconUrl": "https://cdn.simpleicons.org/zig"
+      "iconUrl": "https://cdn.simpleicons.org/zig",
+      "resolver": {
+        "kind": "manual",
+        "infoUrl": "https://ziglang.org/download/"
+      },
+      "fallback": {
+        "version": "0.13.0",
+        "downloadUrl": "https://ziglang.org/download/0.13.0/zig-windows-x86_64-0.13.0.zip",
+        "fileName": "zig-windows-x86_64-0.13.0.zip"
+      }
     },
     {
       "id": "php",
-      "version": "8.3.7",
       "name": "PHP",
       "type": "compiler",
       "author": "The PHP Group",
       "description": "The PHP scripting language interpreter and runtime for Windows.",
-      "fileName": "php-8.3.7-Win32-vs16-x64.zip",
-      "downloadUrl": "https://windows.php.net/downloads/releases/php-8.3.7-Win32-vs16-x64.zip",
-      "iconUrl": "https://cdn.simpleicons.org/php"
+      "iconUrl": "https://cdn.simpleicons.org/php",
+      "resolver": {
+        "kind": "json-lookup",
+        "url": "https://windows.php.net/downloads/releases/releases.json",
+        "selectKey": "majorMinor",
+        "majorMinor": "8.3",
+        "versionField": "version",
+        "urlTemplate": "https://windows.php.net/downloads/releases/php-{version}-Win32-vs16-x64.zip",
+        "fileNameTemplate": "php-{version}-Win32-vs16-x64.zip"
+      },
+      "fallback": {
+        "version": "8.3.7",
+        "downloadUrl": "https://windows.php.net/downloads/releases/php-8.3.7-Win32-vs16-x64.zip",
+        "fileName": "php-8.3.7-Win32-vs16-x64.zip"
+      }
     },
     {
       "id": "kotlin",
-      "version": "1.9.24",
       "name": "Kotlin",
       "type": "compiler",
       "author": "JetBrains",
       "description": "The Kotlin programming language compiler (kotlinc).",
-      "fileName": "kotlin-compiler-1.9.24.zip",
-      "downloadUrl": "https://github.com/JetBrains/kotlin/releases/download/v1.9.24/kotlin-compiler-1.9.24.zip",
-      "iconUrl": "https://cdn.simpleicons.org/kotlin"
+      "iconUrl": "https://cdn.simpleicons.org/kotlin",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "JetBrains/kotlin",
+        "assetPattern": "^kotlin-compiler-.*\\.zip$",
+        "versionPattern": "^v(.+)$"
+      },
+      "fallback": {
+        "version": "1.9.24",
+        "downloadUrl": "https://github.com/JetBrains/kotlin/releases/download/v1.9.24/kotlin-compiler-1.9.24.zip",
+        "fileName": "kotlin-compiler-1.9.24.zip"
+      }
     },
     {
       "id": "dart",
-      "version": "3.4.1",
       "name": "Dart SDK",
       "type": "compiler",
       "author": "Google",
       "description": "The Dart SDK, including the Dart VM, compiler, and tools.",
-      "fileName": "dartsdk-windows-x64-release.zip",
-      "downloadUrl": "https://storage.googleapis.com/dart-archive/channels/stable/release/3.4.1/sdk/dartsdk-windows-x64-release.zip",
-      "iconUrl": "https://cdn.simpleicons.org/dart"
+      "iconUrl": "https://cdn.simpleicons.org/dart",
+      "resolver": {
+        "kind": "text-pointer",
+        "url": "https://storage.googleapis.com/dart-archive/channels/stable/release/latest/VERSION",
+        "urlTemplate": "https://storage.googleapis.com/dart-archive/channels/stable/release/{version}/sdk/dartsdk-windows-x64-release.zip",
+        "fileNameTemplate": "dartsdk-windows-x64-release.zip"
+      },
+      "fallback": {
+        "version": "3.4.1",
+        "downloadUrl": "https://storage.googleapis.com/dart-archive/channels/stable/release/3.4.1/sdk/dartsdk-windows-x64-release.zip",
+        "fileName": "dartsdk-windows-x64-release.zip"
+      }
     },
     {
       "id": "ghc",
-      "version": "9.8.2",
       "name": "Glasgow Haskell Compiler (GHC)",
       "type": "compiler",
       "author": "GHC Team",
       "description": "The Glasgow Haskell Compiler and toolchain.",
-      "fileName": "ghc-9.8.2-x86_64-unknown-mingw32.tar.xz",
-      "downloadUrl": "https://downloads.haskell.org/~ghc/9.8.2/ghc-9.8.2-x86_64-unknown-mingw32.tar.xz",
-      "iconUrl": "https://cdn.simpleicons.org/haskell"
+      "iconUrl": "https://cdn.simpleicons.org/haskell",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "ghc/ghc",
+        "assetPattern": "^ghc-.*-x86_64-.*mingw32\\.tar\\.xz$",
+        "versionPattern": "^ghc-(.+)-release$"
+      },
+      "fallback": {
+        "version": "9.8.2",
+        "downloadUrl": "https://downloads.haskell.org/~ghc/9.8.2/ghc-9.8.2-x86_64-unknown-mingw32.tar.xz",
+        "fileName": "ghc-9.8.2-x86_64-unknown-mingw32.tar.xz"
+      }
     },
     {
       "id": "typescript",
-      "version": "5.5.4",
       "name": "TypeScript",
       "type": "compiler",
       "author": "Microsoft",
       "description": "The official TypeScript compiler and static type checker (tsc).",
-      "fileName": "typescript-5.5.4.tgz",
-      "downloadUrl": "https://registry.npmjs.org/typescript/-/typescript-5.5.4.tgz",
-      "iconUrl": "https://cdn.simpleicons.org/typescript"
+      "iconUrl": "https://cdn.simpleicons.org/typescript",
+      "resolver": {
+        "kind": "json-lookup",
+        "url": "https://registry.npmjs.org/{package}/latest",
+        "package": "typescript",
+        "versionField": "version",
+        "urlField": "dist.tarball"
+      },
+      "fallback": {
+        "version": "5.5.4",
+        "downloadUrl": "https://registry.npmjs.org/typescript/-/typescript-5.5.4.tgz",
+        "fileName": "typescript-5.5.4.tgz"
+      }
     },
     {
       "id": "gcc",
-      "version": "14.2.0",
       "name": "GCC (MinGW-w64)",
       "type": "compiler",
       "author": "GNU Project",
       "description": "The GNU Compiler Collection for C, C++, Fortran, and more, via MinGW-w64.",
-      "fileName": "x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev0.7z",
-      "downloadUrl": "https://github.com/niXman/mingw-builds-binaries/releases/download/14.2.0-rt_v12-rev0/x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev0.7z",
-      "iconUrl": "https://cdn.simpleicons.org/gnu"
+      "iconUrl": "https://cdn.simpleicons.org/gnu",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "niXman/mingw-builds-binaries",
+        "assetPattern": "^x86_64-.*-release-win32-seh-ucrt-.*\\.7z$"
+      },
+      "fallback": {
+        "version": "14.2.0",
+        "downloadUrl": "https://github.com/niXman/mingw-builds-binaries/releases/download/14.2.0-rt_v12-rev0/x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev0.7z",
+        "fileName": "x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev0.7z"
+      }
     },
     {
       "id": "elixir",
-      "version": "1.17.1",
       "name": "Elixir",
       "type": "compiler",
       "author": "Elixir Project",
       "description": "Elixir programming language, including the compiler and runtime.",
-      "fileName": "elixir-1.17.1.exe",
-      "downloadUrl": "https://github.com/elixir-lang/elixir/releases/download/v1.17.1/elixir-1.17.1.exe",
-      "iconUrl": "https://cdn.simpleicons.org/elixir"
+      "iconUrl": "https://cdn.simpleicons.org/elixir",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "elixir-lang/elixir",
+        "assetPattern": "^elixir-.*\\.exe$",
+        "versionPattern": "^v(.+)$"
+      },
+      "fallback": {
+        "version": "1.17.1",
+        "downloadUrl": "https://github.com/elixir-lang/elixir/releases/download/v1.17.1/elixir-1.17.1.exe",
+        "fileName": "elixir-1.17.1.exe"
+      }
     },
     {
       "id": "erlang",
-      "version": "27.0",
       "name": "Erlang/OTP",
       "type": "compiler",
       "author": "Ericsson",
       "description": "Erlang/OTP runtime and compiler (erlc).",
-      "fileName": "otp_win64_27.0.exe",
-      "downloadUrl": "https://erlang.org/download/otp_win64_27.0.exe",
-      "iconUrl": "https://cdn.simpleicons.org/erlang"
+      "iconUrl": "https://cdn.simpleicons.org/erlang",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "erlang/otp",
+        "assetPattern": "^otp_win64_.*\\.exe$",
+        "versionPattern": "^OTP-(.+)$"
+      },
+      "fallback": {
+        "version": "27.0",
+        "downloadUrl": "https://erlang.org/download/otp_win64_27.0.exe",
+        "fileName": "otp_win64_27.0.exe"
+      }
     },
     {
       "id": "crystal",
-      "version": "1.14.0",
       "name": "Crystal",
       "type": "compiler",
       "author": "Crystal Project",
       "description": "Crystal programming language compiler with Ruby-like syntax.",
-      "fileName": "crystal-1.14.0-windows-x86_64.exe",
-      "downloadUrl": "https://github.com/crystal-lang/crystal/releases/download/1.14.0/crystal-1.14.0-windows-x86_64.exe",
-      "iconUrl": "https://cdn.simpleicons.org/crystal"
+      "iconUrl": "https://cdn.simpleicons.org/crystal",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "crystal-lang/crystal",
+        "assetPattern": "^crystal-.*-windows-x86_64\\.exe$"
+      },
+      "fallback": {
+        "version": "1.14.0",
+        "downloadUrl": "https://github.com/crystal-lang/crystal/releases/download/1.14.0/crystal-1.14.0-windows-x86_64.exe",
+        "fileName": "crystal-1.14.0-windows-x86_64.exe"
+      }
     },
     {
       "id": "nim",
-      "version": "2.0.8",
       "name": "Nim",
       "type": "compiler",
       "author": "Nim Project",
       "description": "Nim programming language compiler (nim).",
-      "fileName": "nim-2.0.8-x64.exe",
-      "downloadUrl": "https://nim-lang.org/download/nim-2.0.8-x64.exe",
-      "iconUrl": "https://cdn.simpleicons.org/nim"
+      "iconUrl": "https://cdn.simpleicons.org/nim",
+      "resolver": {
+        "kind": "manual",
+        "infoUrl": "https://nim-lang.org/install_windows.html"
+      },
+      "fallback": {
+        "version": "2.0.8",
+        "downloadUrl": "https://nim-lang.org/download/nim-2.0.8-x64.exe",
+        "fileName": "nim-2.0.8-x64.exe"
+      }
     },
     {
       "id": "vlang",
-      "version": "0.4.7",
       "name": "V Lang",
       "type": "compiler",
       "author": "V Project",
       "description": "V programming language compiler (v).",
-      "fileName": "v-windows.zip",
-      "downloadUrl": "https://github.com/vlang/v/releases/download/0.4.7/v-windows.zip",
-      "iconUrl": "https://cdn.simpleicons.org/v"
+      "iconUrl": "https://cdn.simpleicons.org/v",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "vlang/v",
+        "assetPattern": "^v-windows\\.zip$"
+      },
+      "fallback": {
+        "version": "0.4.7",
+        "downloadUrl": "https://github.com/vlang/v/releases/download/0.4.7/v-windows.zip",
+        "fileName": "v-windows.zip"
+      }
     },
     {
       "id": "ocaml",
-      "version": "5.2.0",
       "name": "OCaml",
       "type": "compiler",
       "author": "OCaml Project",
       "description": "OCaml compiler and toolchain (ocamlc, ocamlopt).",
-      "fileName": "ocaml-5.2.0-win64.exe",
-      "downloadUrl": "https://github.com/ocaml/ocaml/releases/download/5.2.0/ocaml-5.2.0-win64.exe",
-      "iconUrl": "https://cdn.simpleicons.org/ocaml"
+      "iconUrl": "https://cdn.simpleicons.org/ocaml",
+      "resolver": {
+        "kind": "manual",
+        "infoUrl": "https://ocaml.org/install#windows"
+      },
+      "fallback": {
+        "version": "5.2.0",
+        "downloadUrl": "https://github.com/ocaml/ocaml/releases/download/5.2.0/ocaml-5.2.0-win64.exe",
+        "fileName": "ocaml-5.2.0-win64.exe"
+      }
     },
     {
       "id": "scala",
-      "version": "3.4.1",
       "name": "Scala",
       "type": "compiler",
       "author": "Scala Center",
       "description": "Scala compiler and tools (scalac).",
-      "fileName": "scala-3.4.1.zip",
-      "downloadUrl": "https://github.com/lampepfl/dotty/releases/download/3.4.1/scala3-3.4.1.zip",
-      "iconUrl": "https://cdn.simpleicons.org/scala"
+      "iconUrl": "https://cdn.simpleicons.org/scala",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "scala/scala3",
+        "assetPattern": "^scala3-.*\\.zip$",
+        "versionPattern": "^v(.+)$"
+      },
+      "fallback": {
+        "version": "3.4.1",
+        "downloadUrl": "https://github.com/lampepfl/dotty/releases/download/3.4.1/scala3-3.4.1.zip",
+        "fileName": "scala-3.4.1.zip"
+      }
     },
     {
       "id": "groovy",
-      "version": "4.0.21",
       "name": "Apache Groovy",
       "type": "compiler",
       "author": "Apache Software Foundation",
       "description": "Groovy programming language compiler and runtime.",
-      "fileName": "apache-groovy-sdk-4.0.21.zip",
-      "downloadUrl": "https://groovy.apache.org/download.html",
-      "iconUrl": "https://cdn.simpleicons.org/apachegroovy"
+      "iconUrl": "https://cdn.simpleicons.org/apachegroovy",
+      "resolver": {
+        "kind": "manual",
+        "infoUrl": "https://groovy.apache.org/download.html"
+      },
+      "fallback": {
+        "version": "4.0.21",
+        "downloadUrl": "https://groovy.apache.org/download.html",
+        "fileName": "apache-groovy-sdk-4.0.21.zip"
+      }
     },
     {
       "id": "clojure",
-      "version": "1.11.4",
       "name": "Clojure",
       "type": "compiler",
       "author": "Clojure Project",
       "description": "Clojure programming language compiler and runtime.",
-      "fileName": "clojure-1.11.4.zip",
-      "downloadUrl": "https://github.com/clojure/clojure/releases/download/v1.11.4/clojure-1.11.4.zip",
-      "iconUrl": "https://cdn.simpleicons.org/clojure"
+      "iconUrl": "https://cdn.simpleicons.org/clojure",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "clojure/clojure",
+        "assetPattern": "^clojure-.*\\.zip$",
+        "versionPattern": "^clojure-(.+)$"
+      },
+      "fallback": {
+        "version": "1.11.4",
+        "downloadUrl": "https://github.com/clojure/clojure/releases/download/v1.11.4/clojure-1.11.4.zip",
+        "fileName": "clojure-1.11.4.zip"
+      }
     },
     {
       "id": "ada",
-      "version": "2023.0.0",
       "name": "GNAT Ada",
       "type": "compiler",
       "author": "AdaCore",
       "description": "Ada programming language compiler (GNAT).",
-      "fileName": "gnat-2023-20230523-x86_64-windows64-bin.exe",
-      "downloadUrl": "https://www.adacore.com/download",
-      "iconUrl": "https://cdn.simpleicons.org/ada"
+      "iconUrl": "https://cdn.simpleicons.org/ada",
+      "resolver": {
+        "kind": "manual",
+        "infoUrl": "https://www.adacore.com/download"
+      },
+      "fallback": {
+        "version": "2023.0.0",
+        "downloadUrl": "https://www.adacore.com/download",
+        "fileName": "gnat-2023-20230523-x86_64-windows64-bin.exe"
+      }
     },
     {
       "id": "lua",
-      "version": "5.4.7",
       "name": "Lua",
       "type": "compiler",
       "author": "Lua Project",
       "description": "Lua programming language interpreter and compiler (luac).",
-      "fileName": "lua-5.4.7_Win64_bin.zip",
-      "downloadUrl": "https://sourceforge.net/projects/luabinaries/files/5.4.7/",
-      "iconUrl": "https://cdn.simpleicons.org/lua"
+      "iconUrl": "https://cdn.simpleicons.org/lua",
+      "resolver": {
+        "kind": "manual",
+        "infoUrl": "https://sourceforge.net/projects/luabinaries/files/"
+      },
+      "fallback": {
+        "version": "5.4.7",
+        "downloadUrl": "https://sourceforge.net/projects/luabinaries/files/5.4.7/",
+        "fileName": "lua-5.4.7_Win64_bin.zip"
+      }
     },
     {
       "id": "racket",
-      "version": "8.14",
       "name": "Racket",
       "type": "compiler",
       "author": "Racket Project",
       "description": "Racket programming language compiler and runtime.",
-      "fileName": "racket-8.14-x86_64-win32.exe",
-      "downloadUrl": "https://download.racket-lang.org/",
-      "iconUrl": "https://cdn.simpleicons.org/racket"
+      "iconUrl": "https://cdn.simpleicons.org/racket",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "racket/racket",
+        "assetPattern": "^racket-.*-x86_64-win32\\.exe$"
+      },
+      "fallback": {
+        "version": "8.14",
+        "downloadUrl": "https://download.racket-lang.org/",
+        "fileName": "racket-8.14-x86_64-win32.exe"
+      }
     },
     {
       "id": "coffeescript",
-      "version": "2.7.0",
       "name": "CoffeeScript",
       "type": "compiler",
       "author": "CoffeeScript Project",
       "description": "CoffeeScript compiler (coffee).",
-      "fileName": "coffeescript-2.7.0.tgz",
-      "downloadUrl": "https://registry.npmjs.org/coffeescript/-/coffeescript-2.7.0.tgz",
-      "iconUrl": "https://cdn.simpleicons.org/coffeescript"
+      "iconUrl": "https://cdn.simpleicons.org/coffeescript",
+      "resolver": {
+        "kind": "json-lookup",
+        "url": "https://registry.npmjs.org/{package}/latest",
+        "package": "coffeescript",
+        "versionField": "version",
+        "urlField": "dist.tarball"
+      },
+      "fallback": {
+        "version": "2.7.0",
+        "downloadUrl": "https://registry.npmjs.org/coffeescript/-/coffeescript-2.7.0.tgz",
+        "fileName": "coffeescript-2.7.0.tgz"
+      }
     },
     {
       "id": "elm",
-      "version": "0.19.1",
       "name": "Elm",
       "type": "compiler",
       "author": "Elm Project",
       "description": "Elm programming language compiler (elm).",
-      "fileName": "elm-0.19.1-windows.zip",
-      "downloadUrl": "https://github.com/elm/compiler/releases/download/0.19.1/elm-0.19.1-windows.zip",
-      "iconUrl": "https://cdn.simpleicons.org/elm"
+      "iconUrl": "https://cdn.simpleicons.org/elm",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "elm/compiler",
+        "assetPattern": "^elm-.*-windows\\.zip$"
+      },
+      "fallback": {
+        "version": "0.19.1",
+        "downloadUrl": "https://github.com/elm/compiler/releases/download/0.19.1/elm-0.19.1-windows.zip",
+        "fileName": "elm-0.19.1-windows.zip"
+      }
     },
     {
       "id": "purescript",
-      "version": "0.15.15",
       "name": "PureScript",
       "type": "compiler",
       "author": "PureScript Project",
       "description": "PureScript compiler (purs).",
-      "fileName": "purescript-0.15.15-win64.tar.gz",
-      "downloadUrl": "https://github.com/purescript/purescript/releases/download/v0.15.15/purescript-0.15.15-win64.tar.gz",
-      "iconUrl": "https://cdn.simpleicons.org/purescript"
+      "iconUrl": "https://cdn.simpleicons.org/purescript",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "purescript/purescript",
+        "assetPattern": "^purescript-.*-win64\\.tar\\.gz$",
+        "versionPattern": "^v(.+)$"
+      },
+      "fallback": {
+        "version": "0.15.15",
+        "downloadUrl": "https://github.com/purescript/purescript/releases/download/v0.15.15/purescript-0.15.15-win64.tar.gz",
+        "fileName": "purescript-0.15.15-win64.tar.gz"
+      }
     },
     {
       "id": "reasonml",
-      "version": "3.11.0",
       "name": "ReasonML",
       "type": "compiler",
       "author": "ReasonML Project",
       "description": "ReasonML compiler (reason).",
-      "fileName": "reason-3.11.0-win.exe",
-      "downloadUrl": "https://github.com/reasonml/reason/releases/download/3.11.0/reason-3.11.0-win.exe",
-      "iconUrl": "https://cdn.simpleicons.org/reason"
+      "iconUrl": "https://cdn.simpleicons.org/reason",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "reasonml/reason",
+        "assetPattern": "^reason-.*-win\\.exe$"
+      },
+      "fallback": {
+        "version": "3.11.0",
+        "downloadUrl": "https://github.com/reasonml/reason/releases/download/3.11.0/reason-3.11.0-win.exe",
+        "fileName": "reason-3.11.0-win.exe"
+      }
     },
     {
       "id": "idris",
-      "version": "1.3.4",
       "name": "Idris",
       "type": "compiler",
       "author": "Idris Project",
       "description": "Idris programming language compiler.",
-      "fileName": "idris-1.3.4-win64.exe",
-      "downloadUrl": "https://github.com/idris-lang/Idris2/releases",
-      "iconUrl": "https://github.com/idris-lang/idris-lang.github.io/blob/main/src/content/images/logo-small.png"
+      "iconUrl": "https://github.com/idris-lang/idris-lang.github.io/blob/main/src/content/images/logo-small.png",
+      "resolver": {
+        "kind": "manual",
+        "infoUrl": "https://github.com/idris-lang/Idris2/releases"
+      },
+      "fallback": {
+        "version": "1.3.4",
+        "downloadUrl": "https://github.com/idris-lang/Idris2/releases",
+        "fileName": "idris-1.3.4-win64.exe"
+      }
     },
     {
       "id": "d",
-      "version": "2.107.0",
       "name": "D Lang (DMD)",
       "type": "compiler",
       "author": "D Language Project",
       "description": "D programming language compiler (DMD).",
-      "fileName": "dmd-2.107.0-windows-x64.exe",
-      "downloadUrl": "https://dlang.org/download.html",
-      "iconUrl": "https://cdn.simpleicons.org/d"
+      "iconUrl": "https://cdn.simpleicons.org/d",
+      "resolver": {
+        "kind": "text-pointer",
+        "url": "https://downloads.dlang.org/releases/LATEST",
+        "urlTemplate": "https://downloads.dlang.org/releases/2.x/{version}/dmd-{version}-windows.exe",
+        "fileNameTemplate": "dmd-{version}-windows.exe"
+      },
+      "fallback": {
+        "version": "2.107.0",
+        "downloadUrl": "https://dlang.org/download.html",
+        "fileName": "dmd-2.107.0-windows-x64.exe"
+      }
     },
     {
       "id": "nasm",
-      "version": "2.16.03",
       "name": "NASM (Netwide Assembler)",
       "type": "compiler",
       "author": "The NASM Development Team",
       "description": "An 80x86 and x86-64 assembler designed for portability and modularity.",
-      "fileName": "nasm-2.16.03-win64.zip",
-      "downloadUrl": "https://www.nasm.us/pub/nasm/releasebuilds/2.16.03/win64/nasm-2.16.03-win64.zip",
-      "iconUrl": "https://cdn.simpleicons.org/assemblyscript"
+      "iconUrl": "https://cdn.simpleicons.org/assemblyscript",
+      "resolver": {
+        "kind": "directory-listing",
+        "indexUrl": "https://www.nasm.us/pub/nasm/releasebuilds/",
+        "entryPattern": "href=\"(\\d+\\.\\d+\\.\\d+)/\"",
+        "downloadUrlTemplate": "https://www.nasm.us/pub/nasm/releasebuilds/{version}/win64/nasm-{version}-win64.zip",
+        "fileNameTemplate": "nasm-{version}-win64.zip"
+      },
+      "fallback": {
+        "version": "2.16.03",
+        "downloadUrl": "https://www.nasm.us/pub/nasm/releasebuilds/2.16.03/win64/nasm-2.16.03-win64.zip",
+        "fileName": "nasm-2.16.03-win64.zip"
+      }
     },
     {
       "id": "holyc",
-      "version": "1.0.0",
       "name": "HolyC Compiler",
       "type": "compiler",
       "author": "Terry A. Davis",
       "description": "The HolyC compiler originally developed for TempleOS.",
-      "fileName": "HolyC-Compiler.zip",
-      "downloadUrl": "https://github.com/nrootconauto/HolyC-Compiler/archive/refs/heads/master.zip",
-      "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/HolyC_Logo.svg"
+      "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/HolyC_Logo.svg",
+      "resolver": {
+        "kind": "manual",
+        "infoUrl": "https://github.com/nrootconauto/HolyC-Compiler"
+      },
+      "fallback": {
+        "version": "1.0.0",
+        "downloadUrl": "https://github.com/nrootconauto/HolyC-Compiler/archive/refs/heads/master.zip",
+        "fileName": "HolyC-Compiler.zip"
+      }
     },
     {
       "id": "gravel",
-      "version": "v0.2.0",
       "name": "Gravel",
       "type": "compiler",
       "author": "Pacsfury",
       "description": "Gravel Launcher release v0.2.0.",
-      "fileName": "gravel.zip",
-      "downloadUrl": "https://github.com/Pacsfury/Gravel-Launcher/releases/download/v0.2.0/gravel.zip",
-      "iconUrl": "https://github.com/Pacsfury/Gravel-Launcher/blob/main/img/logo.png"
+      "iconUrl": "https://github.com/Pacsfury/Gravel-Launcher/blob/main/img/logo.png",
+      "resolver": {
+        "kind": "github-release",
+        "repo": "Pacsfury/Gravel-Launcher",
+        "assetPattern": "^gravel\\.zip$"
+      },
+      "fallback": {
+        "version": "v0.2.0",
+        "downloadUrl": "https://github.com/Pacsfury/Gravel-Launcher/releases/download/v0.2.0/gravel.zip",
+        "fileName": "gravel.zip"
+      }
     }
   ]
 }
