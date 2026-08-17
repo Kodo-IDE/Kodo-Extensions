@@ -249,6 +249,7 @@
       "iconUrl": "https://raw.githubusercontent.com/Shine-Language/Shine-Website/main/logo.png",
       "fileExtensions": [".shine"],
       "languageExtensions": ["shine-kodo-extension"],
+      "build": "shinec {file} -o {name}.exe",
       "resolver": {
         "kind": "github-release",
         "repo": "Shine-Language/Shine-Compiler",
