@@ -692,7 +692,7 @@
       "type": "compiler",
       "author": "Idris Project",
       "description": "Idris programming language compiler.",
-      "iconUrl": "https://github.com/idris-lang/idris-lang.github.io/blob/main/src/content/images/logo-small.png",
+      "iconUrl": "https://pbs.twimg.com/profile_images/838385415132413952/6UQFD8wV.jpg",
       "resolver": {
         "kind": "manual",
         "infoUrl": "https://github.com/idris-lang/Idris2/releases"
