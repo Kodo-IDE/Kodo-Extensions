@@ -7,6 +7,10 @@
       "author": "Microsoft",
       "description": "The .NET SDK - C#/F#/VB compilers, MSBuild, and the dotnet CLI.",
       "iconUrl": "https://cdn.simpleicons.org/dotnet",
+      "fileExtensions": [".cs", ".csproj", ".sln", ".fs", ".fsproj", ".vb", ".vbproj", ".razor", ".cshtml"],
+      "languageExtensions": ["csharp-kodo-extension"],
+      "run": "dotnet run",
+      "build": "dotnet build",
       "resolver": {
         "kind": "text-pointer",
         "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/{channel}/latest.version",
@@ -27,6 +31,9 @@
       "author": "Google",
       "description": "The Go programming language compiler and tools.",
       "iconUrl": "https://cdn.simpleicons.org/go",
+      "fileExtensions": [".go"],
+      "run": "go run .",
+      "build": "go build .",
       "resolver": {
         "kind": "json-lookup",
         "url": "https://go.dev/dl/?mode=json",
@@ -51,6 +58,10 @@
       "author": "Eclipse Adoptium",
       "description": "OpenJDK build (javac and the JVM) from the Eclipse Adoptium project.",
       "iconUrl": "https://cdn.simpleicons.org/openjdk",
+      "fileExtensions": [".java"],
+      "languageExtensions": ["java-kodo-extension"],
+      "run": "java {name}",
+      "build": "javac {file}",
       "resolver": {
         "kind": "github-release",
         "repo": "adoptium/temurin21-binaries",
@@ -70,6 +81,14 @@
       "author": "LLVM Project",
       "description": "Clang/LLVM compiler toolchain for Windows.",
       "iconUrl": "https://cdn.simpleicons.org/llvm",
+      "fileExtensions": [".c", ".cpp", ".cc", ".cxx", ".h", ".hpp"],
+      "languageExtensions": ["cpp-kodo-extension"],
+      "fileCommands": {
+        ".c": { "build": "clang {file} -o {name}.exe" },
+        ".cpp": { "build": "clang++ {file} -o {name}.exe" },
+        ".cc": { "build": "clang++ {file} -o {name}.exe" },
+        ".cxx": { "build": "clang++ {file} -o {name}.exe" }
+      },
       "resolver": {
         "kind": "github-release",
         "repo": "llvm/llvm-project",
@@ -89,6 +108,14 @@
       "author": "MSYS2 Project",
       "description": "GCC/G++ for Windows through the MSYS2 environment and package manager.",
       "iconUrl": "https://cdn.simpleicons.org/gnu",
+      "fileExtensions": [".c", ".cpp", ".cc", ".cxx", ".h", ".hpp"],
+      "languageExtensions": ["cpp-kodo-extension"],
+      "fileCommands": {
+        ".c": { "build": "gcc {file} -o {name}.exe" },
+        ".cpp": { "build": "g++ {file} -o {name}.exe" },
+        ".cc": { "build": "g++ {file} -o {name}.exe" },
+        ".cxx": { "build": "g++ {file} -o {name}.exe" }
+      },
       "resolver": {
         "kind": "github-release",
         "repo": "msys2/msys2-installer",
@@ -107,6 +134,9 @@
       "author": "OpenJS Foundation",
       "description": "JavaScript runtime built on V8, including npm.",
       "iconUrl": "https://cdn.simpleicons.org/nodedotjs",
+      "fileExtensions": [".js", ".mjs", ".cjs"],
+      "languageExtensions": ["JavaScript-kodo-extension"],
+      "run": "node {file}",
       "resolver": {
         "kind": "json-lookup",
         "url": "https://nodejs.org/dist/index.json",
@@ -128,6 +158,8 @@
       "author": "Strawberry Perl Project",
       "description": "A complete Perl environment for Windows, including a C toolchain.",
       "iconUrl": "https://cdn.simpleicons.org/perl",
+      "fileExtensions": [".pl", ".pm"],
+      "run": "perl {file}",
       "resolver": {
         "kind": "directory-listing",
         "indexUrl": "https://strawberryperl.com/download/",
@@ -148,6 +180,9 @@
       "author": "Python Software Foundation",
       "description": "The reference CPython interpreter and toolchain.",
       "iconUrl": "https://cdn.simpleicons.org/python",
+      "fileExtensions": [".py", ".pyw"],
+      "languageExtensions": ["python-kodo-extension"],
+      "run": "python {file}",
       "resolver": {
         "kind": "directory-listing",
         "indexUrl": "https://www.python.org/ftp/python/",
@@ -168,6 +203,8 @@
       "author": "RubyInstaller Team",
       "description": "Ruby interpreter for Windows via RubyInstaller, including DevKit.",
       "iconUrl": "https://cdn.simpleicons.org/ruby",
+      "fileExtensions": [".rb"],
+      "run": "ruby {file}",
       "resolver": {
         "kind": "github-release",
         "repo": "oneclick/rubyinstaller2",
@@ -187,6 +224,10 @@
       "author": "Rust Foundation",
       "description": "Installs rustup, the Rust toolchain installer, then the latest stable rustc/cargo.",
       "iconUrl": "https://cdn.simpleicons.org/rust",
+      "fileExtensions": [".rs"],
+      "languageExtensions": ["Rust-kodo-extension"],
+      "run": "cargo run",
+      "build": "cargo build",
       "resolver": {
         "kind": "always-latest",
         "downloadUrl": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe",
@@ -206,6 +247,8 @@
       "author": "KerbalMissile",
       "description": "The compiler for the Shine language by KerbalMissile.",
       "iconUrl": "https://raw.githubusercontent.com/Shine-Language/Shine-Website/main/logo.png",
+      "fileExtensions": [".shine"],
+      "languageExtensions": ["shine-kodo-extension"],
       "resolver": {
         "kind": "github-release",
         "repo": "Shine-Language/Shine-Compiler",
@@ -226,6 +269,9 @@
       "author": "Swift.org",
       "description": "The Swift compiler and toolchain for Windows.",
       "iconUrl": "https://cdn.simpleicons.org/swift",
+      "fileExtensions": [".swift"],
+      "run": "swift {file}",
+      "build": "swift build",
       "resolver": {
         "kind": "github-release",
         "repo": "swiftlang/swift",
@@ -245,6 +291,9 @@
       "author": "Zig Software Foundation",
       "description": "The Zig programming language compiler and toolchain.",
       "iconUrl": "https://cdn.simpleicons.org/zig",
+      "fileExtensions": [".zig"],
+      "run": "zig run {file}",
+      "build": "zig build-exe {file} -femit-bin={name}.exe",
       "resolver": {
         "kind": "manual",
         "infoUrl": "https://ziglang.org/download/"
@@ -262,6 +311,8 @@
       "author": "The PHP Group",
       "description": "The PHP scripting language interpreter and runtime for Windows.",
       "iconUrl": "https://cdn.simpleicons.org/php",
+      "fileExtensions": [".php"],
+      "run": "php {file}",
       "resolver": {
         "kind": "json-lookup",
         "url": "https://windows.php.net/downloads/releases/releases.json",
@@ -284,6 +335,9 @@
       "author": "JetBrains",
       "description": "The Kotlin programming language compiler (kotlinc).",
       "iconUrl": "https://cdn.simpleicons.org/kotlin",
+      "fileExtensions": [".kt", ".kts"],
+      "run": "kotlin {name}Kt",
+      "build": "kotlinc {file} -include-runtime -d {name}.jar",
       "resolver": {
         "kind": "github-release",
         "repo": "JetBrains/kotlin",
@@ -303,6 +357,9 @@
       "author": "Microsoft",
       "description": "The official TypeScript compiler and static type checker (tsc).",
       "iconUrl": "https://cdn.simpleicons.org/typescript",
+      "fileExtensions": [".ts"],
+      "languageExtensions": ["typescript-kodo-extension"],
+      "build": "tsc {file}",
       "resolver": {
         "kind": "json-lookup",
         "url": "https://registry.npmjs.org/{package}/latest",
@@ -323,6 +380,14 @@
       "author": "GNU Project",
       "description": "The GNU Compiler Collection for C, C++, Fortran, and more, via MinGW-w64.",
       "iconUrl": "https://cdn.simpleicons.org/gnu",
+      "fileExtensions": [".c", ".cpp", ".cc", ".cxx", ".h", ".hpp"],
+      "languageExtensions": ["cpp-kodo-extension"],
+      "fileCommands": {
+        ".c": { "build": "gcc {file} -o {name}.exe" },
+        ".cpp": { "build": "g++ {file} -o {name}.exe" },
+        ".cc": { "build": "g++ {file} -o {name}.exe" },
+        ".cxx": { "build": "g++ {file} -o {name}.exe" }
+      },
       "resolver": {
         "kind": "github-release",
         "repo": "niXman/mingw-builds-binaries",
@@ -341,6 +406,8 @@
       "author": "Lua Project",
       "description": "Lua programming language interpreter and compiler (luac).",
       "iconUrl": "https://cdn.simpleicons.org/lua",
+      "fileExtensions": [".lua"],
+      "run": "lua {file}",
       "resolver": {
         "kind": "manual",
         "infoUrl": "https://sourceforge.net/projects/luabinaries/files/"
@@ -358,6 +425,8 @@
       "author": "CoffeeScript Project",
       "description": "CoffeeScript compiler (coffee).",
       "iconUrl": "https://cdn.simpleicons.org/coffeescript",
+      "fileExtensions": [".coffee"],
+      "run": "coffee {file}",
       "resolver": {
         "kind": "json-lookup",
         "url": "https://registry.npmjs.org/{package}/latest",
@@ -378,6 +447,8 @@
       "author": "The NASM Development Team",
       "description": "An 80x86 and x86-64 assembler designed for portability and modularity.",
       "iconUrl": "https://cdn.simpleicons.org/assemblyscript",
+      "fileExtensions": [".asm", ".s"],
+      "build": "nasm {file} -f win64 -o {name}.obj",
       "resolver": {
         "kind": "directory-listing",
         "indexUrl": "https://www.nasm.us/pub/nasm/releasebuilds/",
@@ -398,6 +469,8 @@
       "author": "Terry A. Davis",
       "description": "The HolyC compiler originally developed for TempleOS.",
       "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/HolyC_Logo.svg",
+      "fileExtensions": [".hc"],
+      "languageExtensions": ["HolyC-kodo-extension"],
       "resolver": {
         "kind": "manual",
         "infoUrl": "https://github.com/nrootconauto/HolyC-Compiler"
