@@ -57,13 +57,13 @@
     },
     {
       "id": "python-kodo-extension",
-      "version": "v1.3.0",
+      "version": "v1.4.0",
       "name": "Python Language Support",
       "type": "language",
       "author": "Kodo Team",
       "description": "Syntax highlighting for Python files.",
-      "fileName": "Python-Kodo-Extension-v1.3.0.kox",
-      "downloadUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/Python-Kodo-Extension-v1.3.0.kox",
+      "fileName": "Python-Kodo-Extension-v1.4.0.kox",
+      "downloadUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/Python-Kodo-Extension-v1.4.0.kox",
       "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
     },
     {
