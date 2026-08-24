@@ -394,28 +394,6 @@
       }
     },
     {
-      "id": "coffeescript",
-      "name": "CoffeeScript",
-      "type": "compiler",
-      "author": "CoffeeScript Project",
-      "description": "CoffeeScript compiler (coffee).",
-      "iconUrl": "https://cdn.simpleicons.org/coffeescript",
-      "fileExtensions": [".coffee"],
-      "run": "coffee {file}",
-      "resolver": {
-        "kind": "json-lookup",
-        "url": "https://registry.npmjs.org/{package}/latest",
-        "package": "coffeescript",
-        "versionField": "version",
-        "urlField": "dist.tarball"
-      },
-      "fallback": {
-        "version": "2.7.0",
-        "downloadUrl": "https://registry.npmjs.org/coffeescript/-/coffeescript-2.7.0.tgz",
-        "fileName": "coffeescript-2.7.0.tgz"
-      }
-    },
-    {
       "id": "nasm",
       "name": "NASM (Netwide Assembler)",
       "type": "compiler",
