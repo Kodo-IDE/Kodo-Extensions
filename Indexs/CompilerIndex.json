@@ -375,32 +375,6 @@
       }
     },
     {
-      "id": "gcc",
-      "name": "GCC (MinGW-w64)",
-      "type": "compiler",
-      "author": "GNU Project",
-      "description": "The GNU Compiler Collection for C, C++, Fortran, and more, via MinGW-w64.",
-      "iconUrl": "https://cdn.simpleicons.org/gnu",
-      "fileExtensions": [".c", ".cpp", ".cc", ".cxx", ".h", ".hpp"],
-      "languageExtensions": ["cpp-kodo-extension"],
-      "fileCommands": {
-        ".c": { "build": "gcc {file} -o {name}.exe" },
-        ".cpp": { "build": "g++ {file} -o {name}.exe" },
-        ".cc": { "build": "g++ {file} -o {name}.exe" },
-        ".cxx": { "build": "g++ {file} -o {name}.exe" }
-      },
-      "resolver": {
-        "kind": "github-release",
-        "repo": "niXman/mingw-builds-binaries",
-        "assetPattern": "^x86_64-.*-release-win32-seh-ucrt-.*\\.7z$"
-      },
-      "fallback": {
-        "version": "14.2.0",
-        "downloadUrl": "https://github.com/niXman/mingw-builds-binaries/releases/download/14.2.0-rt_v12-rev0/x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev0.7z",
-        "fileName": "x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev0.7z"
-      }
-    },
-    {
       "id": "lua",
       "name": "Lua",
       "type": "compiler",
