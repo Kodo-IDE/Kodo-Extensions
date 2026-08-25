@@ -123,7 +123,7 @@
     },
     {
       "id": "xml-kodo-extension",
-      "version": "v1.1.0 ",
+      "version": "v1.1.0",
       "name": "XML Language Support",
       "type": "language",
       "author": "Kodo Team",
