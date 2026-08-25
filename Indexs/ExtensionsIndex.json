@@ -272,8 +272,8 @@
       "author": "Hydranet",
       "description": "Syntax highlighting for C-Prime files.",
       "fileName": "C-Prime-Kodo-Extension-v1.3.5.kox",
-      "downloadUrl": "https://raw.githubusercontent.com/lehrmanaidins/C-Prime/blob/main/Kodo-Editor/C-Prime-Kodo-Extension-v1.3.5.kox",
-      "iconUrl": "https://raw.githubusercontent.com/lehrmanaidins/C-Prime/blob/main/c-prime-icon.png"
+      "downloadUrl": "https://raw.githubusercontent.com/lehrmanaidins/C-Prime/main/Kodo-Editor/C-Prime-Kodo-Extension-v1.3.5.kox",
+      "iconUrl": "https://raw.githubusercontent.com/lehrmanaidins/C-Prime/main/c-prime-icon.png"
     }
   ]
 }
