@@ -12,6 +12,17 @@
       "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg"
     },
     {
+      "id": "ksp-module-manager-config",
+      "version": "v1.0.0",
+      "name": "KSP Module Manager Config",
+      "type": "language",
+      "author": "KerbalMissile",
+      "description": "Syntax highlighting for Kerbal Space Program Module Manager (.cfg) config files.",
+      "fileName": "KSP-Module-Manager-Config-v1.0.0.kox",
+      "downloadUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/KSP-Module-Manager-Config-v1.0.0.kox",
+      "iconUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/ksp-mm-config-icon.png"
+    },
+    {
       "id": "high-contrast-themes",
       "version": "v1.2.0",
       "name": "High Contrast Themes",
