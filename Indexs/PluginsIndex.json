@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    {
+      "id": "my-plugin",
+      "version": "1.0.0",
+      "name": "My Plugin",
+      "type": "plugin",
+      "author": "Developer Name",
+      "description": "A description of what this plugin does",
+      "downloadUrl": "https://api.github.com/repos/Kodo-IDE/Kodo-Extensions/contents/Official_Extensions/my-plugin.kox",
+      "fileName": "my-plugin.kox",
+      "iconUrl": "https://api.github.com/repos/Kodo-IDE/Kodo-Extensions/contents/Resources/my-plugin-icon.svg"
+    }
+  ]
+}
