@@ -218,29 +218,6 @@
       }
     },
     {
-      "id": "rust-rustup",
-      "name": "Rust",
-      "type": "compiler",
-      "author": "Rust Foundation",
-      "description": "Installs rustup, the Rust toolchain installer, then the latest stable rustc/cargo.",
-      "iconUrl": "https://cdn.simpleicons.org/rust",
-      "fileExtensions": [".rs"],
-      "languageExtensions": ["Rust-kodo-extension"],
-      "run": "cargo run",
-      "build": "cargo build",
-      "resolver": {
-        "kind": "always-latest",
-        "downloadUrl": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe",
-        "fileName": "rustup-init.exe",
-        "versionLabel": "rolling (self-updating)"
-      },
-      "fallback": {
-        "version": "1.27.1",
-        "downloadUrl": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe",
-        "fileName": "rustup-init.exe"
-      }
-    },
-    {
       "id": "shine-compiler",
       "name": "Shine Compiler",
       "type": "compiler",
