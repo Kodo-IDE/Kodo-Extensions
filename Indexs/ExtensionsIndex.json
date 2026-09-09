@@ -67,6 +67,17 @@
       "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
     },
     {
+      "id": "arduino-kodo-extension",
+      "version": "v1.0.0",
+      "name": "Arduino Language Support",
+      "type": "language",
+      "author": "Kodo Team",
+      "description": "Syntax highlighting for Arduino sketch files (.ino, .pde) and Arduino-flavored C/C++ headers and sources.",
+      "fileName": "Arduino-Kodo-Extension-v1.0.0.kox",
+      "downloadUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/Arduino-Kodo-Extension-v1.0.0.kox",
+      "iconUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/arduino-icon.png"
+    },
+    {
       "id": "python-kodo-extension",
       "version": "v1.4.0",
       "name": "Python Language Support",
