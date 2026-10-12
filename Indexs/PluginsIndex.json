@@ -2,14 +2,25 @@
   "plugins": [
     {
       "id": "markdown-visualizer",
-      "version": "v1.0.0",
+      "version": "v1.1.0",
       "name": "Markdown Visualizer",
       "type": "plugin",
       "author": "Kodo Team",
-      "description": "Render Markdown files directly in the IDE with a live preview.",
-      "downloadUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/Markdown-Visualizer-v1.0.0.kox",
-      "fileName": "Markdown-Visualizer-v1.0.0.kox",
+      "description": "Live CommonMark and GitHub Flavored Markdown preview with nested lists, tables, task lists, local images, relative links, code copy, and Kodo theme integration.",
+      "downloadUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/Markdown-Visualizer-v1.1.0.kox",
+      "fileName": "Markdown-Visualizer-v1.1.0.kox",
       "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg"
+    },
+    {
+      "id": "git-source-control",
+      "version": "v1.0.0",
+      "name": "Git Source Control",
+      "type": "plugin",
+      "author": "Kodo Team",
+      "description": "VS Code-style Git source control with staged and unstaged changes, diffs, branches, commits, and remote sync.",
+      "downloadUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/Git-Source-Control-v1.0.0.kox",
+      "fileName": "Git-Source-Control-v1.0.0.kox",
+      "iconUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/GitHub_Invertocat_Black.svg"
     }
   ]
 }
