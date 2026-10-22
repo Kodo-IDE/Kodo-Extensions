@@ -200,13 +200,13 @@
     },
     {
       "id": "sql-kodo-extension",
-      "version": "v2.1.0",
+      "version": "v2.2.0",
       "name": "SQL Language Support",
       "type": "language",
       "author": "Kodo Team",
-      "description": "Syntax highlighting for SQL files, including common DDL, DML, joins, functions, and database object names.",
-      "fileName": "SQL-Kodo-Extension-v2.1.0.kox",
-      "downloadUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/SQL-Kodo-Extension-v2.1.0.kox",
+      "description": "Syntax highlighting and language server support for SQL files, powered by syntaqlite.",
+      "fileName": "SQL-Kodo-Extension-v2.2.0.kox",
+      "downloadUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/SQL-Kodo-Extension-v2.2.0.kox",
       "iconUrl": "https://raw.githubusercontent.com/devicons/devicon/master/icons/azuresqldatabase/azuresqldatabase-original.svg"
     },
     {
