@@ -19,7 +19,8 @@
       "author": "Kodo Team",
       "description": "VS Code-style Git source control with staging, diffs, branches, commits, and remote sync.",
       "downloadUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/Git-Source-Control-v1.0.0.kox",
-      "fileName": "Git-Source-Control-v1.0.0.kox"
+      "fileName": "Git-Source-Control-v1.0.0.kox",
+      "iconUrl": "https://raw.githubusercontent.com/Kodo-IDE/Kodo-Extensions/main/Extensions/GitHub_Invertocat_Black.svg"
     }
   ]
 }
